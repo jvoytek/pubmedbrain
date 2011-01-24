@@ -1,0 +1,3 @@
+ventral posterolateral nucleus,VPL
+ventral posteromedial nucleus,VPM
+ventral tegmental area,VTA

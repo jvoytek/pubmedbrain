@@ -1,0 +1,33 @@
+	<div id="search">
+		<form name="search-form" id="search-form" method="GET" action="/Search">
+		<input id="search-box" name="term_a" type="text" class="ui-corner-all"> <button id="search-button">Search</button>
+		</form>
+	</div>
+	<script language="javascript">
+	$(function() {		
+		$('#search-button').button();
+		$('#search').keyup(function(e) {
+		    if (e.keyCode == 13) {
+		        //Close dialog and/or submit here...
+		        $('#search-form').submit();
+		    }
+		});	
+	var Terms = [
+		{% for category in categories %}
+			{% for term in category.terms %}
+				"{{ term.name }}",
+				{% for synonym in term.synonyms %}
+					"{{ synonym }}",
+				{% endfor %}
+				{% for acronym in term.acronyms %}
+					"{{ acronym }}",
+				{% endfor %}
+			{% endfor %}
+		{% endfor %}
+	];
+	$( "#search-box" ).autocomplete({
+		source: Terms
+	});
+
+	});
+	</script>

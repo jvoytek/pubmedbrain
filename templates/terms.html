@@ -1,0 +1,86 @@
+{% extends "base_template.html" %}	
+
+{% block script %}
+<script language="javascript">
+$(function() {		
+	$('#term-request-submit').button();
+});
+</script>
+{% endblock%}
+
+{% block content %}
+
+{% include "search-form.html" %}
+
+{% if message %}
+	<div id="message">
+	<p>
+	{{ message}}
+	</p>
+	</div>
+{% endif %}
+	
+<h1>Terms</h1>
+
+<p>
+We initially populated the dictionary with phrases for <a href="/Terms">27 drugs, 7 methods, 39 neurochemical, 56 pathologies, 29 white matter tracks, 124 brain regions, 345 cognitive functions, and 47 diseases</a>. Brain region names and associated synonyms were selected from <a href="http://www.braininfo.org" target="_blank">Brain Info (2007)</a>, Neuroscience Division, National Primate Research Center, University of Washington (see <a href="http://www.ncbi.nlm.nih.gov/pubmed/15055392" target="_blank">Bowden & Dubach, NeuroNames 2002, Neuroinformatics. 2003;1(1):43-59</a>). Cognitive functions are from <a href="http://www.cognitiveatlas.org" target="_blank">www.cognitiveatlas.org</a>. Disease names are from <a href="http://www.ninds.nih.gov" target="_blank">www.ninds.nih.gov</a>. The initial population of the dictionary represents the broadest, most common search terms that are also relatively unique (and thus likely not to lead to spurious connections).
+</p>
+
+<p>
+Future versions of this site will make use of more sophisticated techniques (e.g., natural language processing) to more accurately parse term relationships. However, you may now <a href="#term-request">suggest new terms to add to the database</a>. Because we have to calculate the association of any given term with all <em>other</em> terms in the database, updates will occur only periodically to reduce the number of updates. We also hope to re-run the entire search monthly to more accurately reflect the current state of the literature.
+</p>
+
+{% for category in categories %}
+	{% ifnotequal category.name 'silly'%}
+<h3>{{ category.title }}</h3>
+<table cellpadding="3" cellspacing="0" style="border-collapse:collapse;border:1px solid black;">
+<tr>
+<th style="width:250px;border:1px solid black;">Term</th>
+<th style="border:1px solid black;">Synonyms</th>
+</tr>
+{% for term in category.terms %}
+<tr>
+<td style="border:1px solid black;">
+<a href="/Search?term_a={{ term.name|urlencode }}">{{ term.name }}</a>
+</td>
+<td style="border:1px solid black;">
+{% for synonym in term.synonyms %}
+{% if not forloop.first %}, {% endif %}{{ synonym }}
+{% endfor %}
+</td>
+</tr>
+{% endfor %}
+</table>
+	
+	{% endifnotequal %}
+{% endfor %}
+
+<hr />
+
+<div id="feedback">
+
+<a name="term-request"></a><h2>
+Can't find the term you're looking for?
+</h2>
+
+<p>
+We've done our best to include the most common terms in neuroscience, but our list is not exhaustive...yet.  Use the form below to suggest a new term, synonym to an existing term, or even to dispute our classification of synonyms.
+</p>
+
+<form id="term-request-form" action="/Terms" method="POST" class="ui-form">
+<label for="first_name">First Name (optional):</label><br />
+<input type="textbox" name="first_name" id="first_name" /><br />
+<label for="last_name">Last Name (optional):</label><br />
+<input type="textbox" name="last_name" id="last_name" /><br />
+<label for="email">Email Address (optional):</label><br />
+<input type="textbox" name="email" id="email" /><br />
+<label for="term">Term Requested (required):</label><br />
+<input type="textbox" name="term" id="term" /><br />
+<label for="body">Message (optional):<br />
+</label><textarea name="body"></textarea><br />
+<br />
+<input type="submit" id="term-request-submit" value=" Submit Request "/>
+</form>
+
+</div>
+{% endblock %}

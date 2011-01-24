@@ -1,0 +1,39 @@
+{% extends "base_template.html" %}	
+
+{% block content %}
+
+{% include "search-form.html" %}
+
+{% if message %}
+	<div id="message">
+	<p>
+	{{ message}}
+	</p>
+	</div>
+{% endif %}
+	
+<h1>Manuscript</h1>
+
+<p>
+In order to thoroughly explain our methods and as a resource for our users, we have prepared <a href="/documents/Voytek-brainSCANrPreprint.pdf" target="_blank">a manuscript for publication</a> regarding the methods and analyses we have performed. We have submitted this paper for peer-review, but we thought it was important to share everything as soon as possible for any potentially interested users. The peer-review process is glacially slow, and we'll be lucky to have this published by the end of 2011.
+</p>
+
+<p>
+We include here the preprint version of our manuscript and all figures and supplemental materials. We also include <a href="/documents/Voytek-TermsList.xls" target="_blank">an Excel file</a> that contains all of the terms used in the first iteration of this site (462 terms), as well as <a href="/documents/association_matrices.zip" target="_blank">the MATLAB files</a> that contain the quantified associations between all the terms and <a href="/documents/Voytek-BrainGraph.pdf" target="_blank">a zoomable PDF version</a> of the awesome graph below.
+</p>
+
+<img src="/images/Voytek-FullGraph.jpg" alt="Full Graph" width="994" />
+
+<p>
+The <a href="/documents/Voytek-TermsList.xls" target="_blank">Excel file</a> is organized in three columns: the first is what we call the "Authoritative Name", which simply a master term. The second is the list of synonyms for each term, and the third is the category to which the term belongs (<em>i.e.</em>, brain structure, function, disease, or methodology). Note that if a term has multiple synonyms, the authoritative name will be repeated in successive rows.
+</p>
+
+<p>
+The <a href="/documents/association_matrices.zip" target="_blank">MATLAB files</a> each contain two variables: the association matrix and a cell of names. Each row or column in the matrix represents the term found at that index in the naming cell. The value of any given matrix element represents the association between the terms found at position (<em>i</em>,<em>j</em>).
+</p>
+
+<p>
+The <a href="/documents/Voytek-BrainGraph.pdf" target="_blank">PDF file</a> contains the full graph for the brain. You can zoom in to any given node and read the name of the brain region it corresponds to. Construction of this graph was done with <a href="http://www.research.att.com/software_tools" target="_blank">GraphViz</a> (AT&T Research Labs) using a connectivity threshold of 0.095. For a radial graph, the choice of the center element determines the relative shape. Rather than concerning ourselves too much with this, we chose to use the default region for the center, which is the "abducen's nucleus" (the first term in our alphabetically-sorted array). 
+</p>
+
+{% endblock %}

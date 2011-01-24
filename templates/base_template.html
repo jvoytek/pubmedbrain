@@ -1,0 +1,53 @@
+<html lang="en">
+	<head>
+		<title>{% block title %}brainSCANr{% endblock %}</title>
+		<link rel="stylesheet" href="/css/brainscanr/jquery-ui-1.8.7.custom.css" type="text/css" />
+		<link rel="stylesheet" href="/css/style.css" type="text/css" />
+		<script language="javascript" type="text/javascript" src="/script/script.js"></script>
+		<script language="javascript" type="text/javascript" src="/Jit/jit-yc.js"></script>
+		<script language="javascript" type="text/javascript" src="/script/jquery-1.4.4.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/script/jquery-ui-1.8.7.custom.min.js"></script>
+		{% block script %}{% endblock %}
+		{% include "analytics.html" %}
+	</head>
+	<body{% block body-attr %}{% endblock %}>
+	
+	<div id="user-bar">
+	<div class="center">
+	<div id="user-stats">
+		<p>
+		<a href="/" class="no-under"><span id="logo">brain<span style="color:#bbba09"><b>SCAN</b></span>r <span style="font-size:12px;">BETA</span></span></a>
+		{% if nickname %}
+		<span style="float:right; width: 400px;text-align:right;">Hello {{ nickname }} ( <a href="{{ logout_url }}">Log Out</a> )</span>
+		{% endif %}
+		<!-- AddThis Button BEGIN -->
+<span style="float:right; width: 150px;text-align:right;">
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=brainscanr"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0;margin-top:7px;"/></a>
+</span>
+<span style="float:right; width: 225px;text-align:right;">
+<a href="http://blog.brainscanr.com" target="_blank" style="margin-right: 10px">BLOG</a> <a href="/Terms" style="margin: 0 10px">TERMS</a>  <a href="/Paper" style="margin: 0 10px">MANUSCRIPT</a>
+</span>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=brainscanr"></script>
+	<!-- AddThis Button END -->
+
+		</p>
+	</div>
+	</div>
+	</div>
+	
+	<div class="center">
+	<div id="content">	
+	{% block content %}{% endblock %}
+	</div>
+	</div>
+	
+	<div id="footer">
+	<div class="center">
+	<p>
+		&copy; Jessica and Bradley Voytek, 2010-2011
+	</p>
+	</div>
+	</div>
+	</body>
+</html>

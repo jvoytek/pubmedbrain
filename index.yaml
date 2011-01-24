@@ -1,0 +1,12 @@
+indexes:
+
+- kind: ConnectionModel
+  properties:
+  - name: term_keys
+  - name: prob_association
+    direction: desc
+
+- kind: TermModel
+  properties:
+  - name: category
+  - name: name

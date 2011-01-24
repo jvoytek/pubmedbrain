@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Message</title>
+	</head>
+	<body>
+	<h1>Hello {{ nickname }}</h1>
+	<p>(<a href="{{ logout_url }}">Log Out</a>)</p>
+	<form name="import_terms" action="/AddTerms" method="post">
+	Term A: <input type="text" name="term_a"><br />
+	Term B: <input type="text" name="term_b">
+	<input type="submit" value="Import Terms"/>
+	</form>
+	</body>
+</html>

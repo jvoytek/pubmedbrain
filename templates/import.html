@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Add Data</title>
+	</head>
+	<body>
+	<h1>Hello {{ nickname }}</h1>
+	<p>(<a href="{{ logout_url }}">Log Out</a>)</p>
+
+	<h2>Add Lower Case Synonyms</h2>
+	<form name="add_lowercase" action="/admin/AddLower" method="post">
+	<input type="submit" value="Do It!" />
+	</form>
+	
+	<h2>
+	Add Category
+	</h2>
+	
+	<form name="add_category" action="/admin/AddCategory" method="post">
+	Title (human readable title): <input type="text" name="title"><br /> 
+	Name (short, no spaces, lowercase): <input type="text" name="name"><br /> 
+	Color (hex value, no #): <input type="text" name="color"><br /> 
+	Description:<br />
+	<input type="submit" value="Add Category"/>
+	<textarea name="description"></textarea>
+	
+	</form>
+	
+	<h2>
+	Import One Term (and Update with other Terms)
+	</h2>
+	<form name="add_term" action="/admin/AddTerm" method="post">
+	Authoritative Name: <input type="text" name="name"><br /> 
+	Synonyms: <input type="text" name="synonyms"> (comma separated)<br />
+	Category: <input type="text" name="category"><br />
+	<input type="submit" value="Import Term"/>
+	</form>
+
+	<h2>
+	Import Terms
+	</h2>
+	<form name="import_terms" action="/admin/ImportTerms" method="post">
+	File Path: <input type="text" name="terms"> <input type="submit" value="Import Terms"/>
+	</form>
+
+	<h2>
+	Import Synonyms
+	</h2>
+	<form name="import_synonyms" action="/admin/ImportSynonyms" method="post">
+	File Path: <input type="text" name="synonyms"> <input type="submit" value="Import Synonyms"/>
+	</form>
+
+	<h2>
+	Import Acronyms
+	</h2>
+	<form name="import_acronyms" action="/admin/ImportAcronyms" method="post">
+	File Path: <input type="text" name="acronyms"> <input type="submit" value="Import Acronyms"/>
+	</form>
+
+	<p>Total Terms: {{ total_terms }}</p>
+	<p>Total Connections: {{ total_connections }}</p>
+	</body>
+</html>

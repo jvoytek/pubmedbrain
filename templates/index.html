@@ -1,0 +1,103 @@
+{% extends "base_template.html" %}	
+
+{% block script %}
+<script language="javascript">
+$(function() {		
+	$('#feedback-submit').button();
+});
+</script>
+{% endblock%}
+
+{% block content %}
+
+{% include "search-form.html" %}
+
+{% if message %}
+	<div id="message">
+	<p>
+	{{ message}}
+	</p>
+	</div>
+{% endif %}
+
+<div id="preview">
+	<a href="/Search?term_a=happiness"><img src="/images/screen-shot.gif" width="300" height="369" alt="brainSCANr Screen Shot" style="float:right;margin:0 50px;" border="0" /></a>
+	<p class="pull-quote">
+	The goal of neuroscience is to discover the relationships between brain, behavior, and disease. Using the
+Brain Systems, Connections, Associations, and Network Relationships (brainSCANr) engine, you can explore the relationships between neuroscience terms in peer reviewed publications.
+	</p>
+</div>
+
+<h1>About</h1>
+
+<div style="width:400px;margin:40px 0 20px 20px;float:right;background-color:#EEEEEE;padding:20px;clear:right;" class="ui-corner-all">
+<h2 style="margin-top:0;">
+Who Are We?
+</h2>
+
+<p>
+We are <a href="http://darb.ketyov.com" target="_blank">Bradley Voytek</a> (<a href="http://blog.ketyov.com" target="_blank">blog</a>, <a href="http://twitter.com/bradleyvoytek" target="_blank">twitter</a>, <a href="http://darb.ketyov.com/professional/voytek_cv.pdf" target="_blank">CV</a>), PhD and <a href="http://www.voytekdesign.com" target="_blank">Jessica Bolger Voytek</a>, a husband and wife team who thought it would be fun to combine our interests.  Bradley has a PhD in Neuroscience from the University of California, Berkeley, and is currently researching the brain networks and underlying physiology mediating cognition.  Jessica is completing her Masters in <a href="http://ischool.berkeley.edu" target="_blank">Information Management and Systems</a>, which consists of research and course work in Information Organization &amp; Retrieval, Information Systems and Service Design, and User Experience Design.  <a href="mailto:jvoytek@ischool.berkeley.edu">She's also looking for jobs...</a>
+</p>
+
+<p>
+We would also like to thank <a href="http://blog.curtischambers.com/">Curtis Chambers</a>, <a href="http://www.wjh.harvard.edu/~ashenhav/Home.html">Amitai Shenhav</a>, Avgusta Shestyuk, and Kirstie Whitaker for their help and useful discussions during the creation of this site.
+</p>
+
+</div>
+
+<p>
+The Brain Systems, Connections, Associations, and Network Relationships (a phrase with more words than strictly necessary in order to bootstrap a good acronym) assumes that somewhere in all the chaos and noise of the more than 20 million papers on PubMed, there must be some order and rationality.
+</p>
+
+<p>
+To that end, we have created a dictionary of hundreds of brain region names, cognitive and behavioral functions, and diseases (and their synonyms!) to find how often any two phrases co-occur in the scientific literature. We assume that the more often two terms occur together (at the exclusion of those words by themselves, without each other), the more likely they are to be associated.
+</p>
+
+<p>
+Are there problems with this assumption? Yes, but we think you'll like the results anyway.  Obviously the database is limited to the words and phrases with which we have populated it. We also assume that when words co-occur in a paper, that relationship is a positive one (<em>i.e.</em>, brain areas A and B are connected, as opposed to <em>not</em> connected). Luckily, there is a positive publication bias in the peer-reviewed biomedical sciences that we can leverage to our benefit (hooray biases)! Furthermore, we cannot dissociate English homographs; thus, a search for the phrase "rhythm" (to ascertain the brain regions associated with musical rhythm) gives the strongest association with the suprachiasmatic nucleus (that is, for <em>circadian</em> rhythms!)
+</p>
+
+<p>
+Despite these limitations, we believe we have created a powerful visualization tool that will speed research and education, and hopefully allow for the discovery of new, previously unforeseen connections between brain, behavior, and disease.
+</p>
+
+<h2>
+Methods
+</h2>
+
+<h3>
+<a href="/Paper">See detailed methods in the preprint publication!</a>
+</h3>
+
+<p>
+We've now populated the dictionary with phrases for <a href="/Terms">27 drugs, 7 methods, 39 neurochemical, 56 pathologies, 29 white matter tracks, 124 brain regions, 345 cognitive functions, and 47 diseases</a>. Brain region names and associated synonyms were selected from <a href="http://www.braininfo.org" target="_blank">Brain Info (2007)</a>, Neuroscience Division, National Primate Research Center, University of Washington (see <a href="http://www.ncbi.nlm.nih.gov/pubmed/15055392" target="_blank">Bowden & Dubach, NeuroNames 2002, Neuroinformatics. 2003;1(1):43-59</a>). Cognitive functions are from <a href="http://www.cognitiveatlas.org" target="_blank">www.cognitiveatlas.org</a>. Disease names are from <a href="http://www.ninds.nih.gov" target="_blank">www.ninds.nih.gov</a>. The initial population of the dictionary represents the broadest, most common search terms that are also relatively unique (and thus likely not to lead to spurious connections).
+</p>
+
+<p>
+The visualizations on this website are created dynamically using <a href="http://www.thejit.org" target="_blank">Nicolas Garcia Belmonte's JavaScript InfoVis Tool Kit</a>.  A wonderful JavaScript library for creating interactive data visualizations online.
+</p>
+
+<p>
+Future versions of this site will make use of more sophisticated techniques (e.g., natural language processing) to more accurately parse term relationships. However, you may now <a href="/Terms#term-request">suggest new terms to add to the database</a>. Because we have to calculate the association of any given term with all <em>other</em> terms in the database, updates will occur only periodically to reduce the number of updates. We also hope to re-run the entire search monthly to more accurately reflect the current state of the literature.
+</p>
+
+
+<hr />
+
+<a name="feedback"></a><h2>Feedback</h2>
+
+<form id="term-request-form" action="/" method="POST" class="ui-form">
+<label for="first_name">First Name (optional):</label><br />
+<input type="textbox" name="first_name" id="first_name" /><br />
+<label for="last_name">Last Name (optional):</label><br />
+<input type="textbox" name="last_name" id="last_name" /><br />
+<label for="email">Email Address (optional):</label><br />
+<input type="textbox" name="email" id="email" /><br />
+<label for="body">Message (required):<br />
+</label><textarea name="body"></textarea><br />
+<br />
+<input type="submit" id="feedback-submit" value=" Send Message "/>
+</form>
+
+
+{% endblock %}

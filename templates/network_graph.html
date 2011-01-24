@@ -1,0 +1,271 @@
+<html>
+	<head>
+		<title>BrainSCANr</title>
+		<script language="javascript" type="text/javascript" src="/Jit/jit-yc.js"></script>
+		<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+		<script languge="javascript">
+var labelType, useGradients, nativeTextSupport, animate;
+
+(function() {
+  var ua = navigator.userAgent,
+      iStuff = ua.match(/iPhone/i) || ua.match(/iPad/i),
+      typeOfCanvas = typeof HTMLCanvasElement,
+      nativeCanvasSupport = (typeOfCanvas == 'object' || typeOfCanvas == 'function'),
+      textSupport = nativeCanvasSupport 
+        && (typeof document.createElement('canvas').getContext('2d').fillText == 'function');
+  //I'm setting this based on the fact that ExCanvas provides text support for IE
+  //and that as of today iPhone/iPad current text support is lame
+  labelType = (!nativeCanvasSupport || (textSupport && !iStuff))? 'Native' : 'HTML';
+  nativeTextSupport = labelType == 'Native';
+  useGradients = nativeCanvasSupport;
+  animate = !(iStuff || !nativeCanvasSupport);
+})();
+
+var Log = {
+  elem: false,
+  write: function(text){
+    if (!this.elem) 
+      this.elem = document.getElementById('log');
+    this.elem.innerHTML = text;
+    this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
+  }
+};
+
+
+function init(){
+    //init data
+    //If a node in this JSON structure
+    //has the "$type" or "$dim" parameters
+    //defined it will override the "type" and
+    //"dim" parameters globally defined in the
+    //RGraph constructor.
+    var json = [{
+        "id": "{{ term_a.key }}",
+        "name": "{{ term_a.name }}",
+        "data": {
+            "$dim": 10,
+            "some other key": "some other value"
+        },
+        "adjacencies": [
+        {% for connection in connections %}
+        {% if connection.prob_association %}
+        {
+            "nodeTo": "{{ connection.key }}",
+            "data": {
+                "weight": {{ connection.prob_association }}
+            }
+        }, 
+        {% endif %}
+        {% endfor %}
+		]
+    }, 
+        {% for connection in connections %}
+        {% if connection.prob_association %}
+    {
+        "id": "{{ connection.key }}",
+        "name": "{{ connection.name }}",
+        "data": {
+            "$dim": 5,
+            "some other key": "some other value"
+        },
+        "adjacencies": [{
+            "nodeTo": "{{ term_a.key }}",
+            "data": {
+                "weight": {{ connection.prob_association }}
+            }
+        }]
+    }, 
+        {% endif %}
+    	{% endfor %}
+    ];
+    
+    console.log(json)
+    //end
+    //init RGraph
+    var rgraph = new $jit.RGraph({
+      'injectInto': 'infovis',
+      //Optional: Add a background canvas
+      //that draws some concentric circles.
+      'background': {
+        'CanvasStyles': {
+          'strokeStyle': '#555',
+          'shadowBlur': 50,
+          'shadowColor': '#ccc'
+        }
+      },
+        //Nodes and Edges parameters
+        //can be overridden if defined in 
+        //the JSON input data.
+        //This way we can define different node
+        //types individually.
+        Node: {
+            'overridable': true,
+             'color': '#cc0000'
+        },
+        Edge: {
+            'overridable': true,
+            'color': '#cccc00'
+        },
+        //Set polar interpolation.
+        //Default's linear.
+        interpolation: 'polar',
+        //Change the transition effect from linear
+        //to elastic.
+        transition: $jit.Trans.Elastic.easeOut,
+        //Change other animation parameters.
+        duration:3500,
+        fps: 30,
+        //Change father-child distance.
+        levelDistance: 200,
+        //This method is called right before plotting
+        //an edge. This method is useful to change edge styles
+        //individually.
+        onBeforePlotLine: function(adj){
+            //Add some random lineWidth to each edge.
+            if (!adj.data.$lineWidth) 
+                adj.data.$lineWidth = Math.random() * 5 + 1;
+        },
+        
+        onBeforeCompute: function(node){
+            Log.write("centering " + node.name + "...");
+            
+            //Make right column relations list.
+            var html = "<h4>" + node.name + "</h4><b>Connections:</b>";
+            html += "<ul>";
+            node.eachAdjacency(function(adj){
+                var child = adj.nodeTo;
+                html += "<li>" + child.name + "</li>";
+            });
+            html += "</ul>";
+            $jit.id('inner-details').innerHTML = html;
+        },
+        //Add node click handler and some styles.
+        //This method is called only once for each node/label crated.
+        onCreateLabel: function(domElement, node){
+            domElement.innerHTML = node.name;
+            domElement.onclick = function () {
+                rgraph.onClick(node.id, { hideLabels: false });
+            };
+            var style = domElement.style;
+            style.cursor = 'pointer';
+            style.fontSize = "0.8em";
+            style.color = "#fff";
+        },
+        //This method is called when rendering/moving a label.
+        //This is method is useful to make some last minute changes
+        //to node labels like adding some position offset.
+        onPlaceLabel: function(domElement, node){
+            var style = domElement.style;
+            var left = parseInt(style.left);
+            var w = domElement.offsetWidth;
+            style.left = (left - w / 2) + 'px';
+        },
+        
+        onAfterCompute: function(){
+            Log.write("done");
+        }
+        
+    });
+    //load graph.
+    rgraph.loadJSON(json, 1);
+    
+    //compute positions and plot
+    rgraph.refresh();
+    //end
+    rgraph.controller.onBeforeCompute(rgraph.graph.getNode(rgraph.root));
+    rgraph.controller.onAfterCompute();
+    
+}
+		</script>
+		<style>
+#infovis {
+	height: 800px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	background-color: #000000;
+}
+		</style>
+	</head>
+	<body onload="init();">
+	<h1>Hello {{ nickname }}</h1>
+	<p>(<a href="{{ logout_url }}">Log Out</a>)</p>
+	
+	<div id="terms" style="width:250px;float:right;margin-left:20px">
+	<p><b>Choose a Term:</b></p>
+	<p>
+	<b>Structures</b><br />
+	{% for term in structures %}
+	<a href="?term_a={{ term.name }}">{{ term.name }}</a><br />
+	{% endfor %}
+	</p>
+
+	<p>
+	<b>Functions</b><br />
+	{% for term in functions %}
+	<a href="?term_a={{ term.name }}">{{ term.name }}</a><br />
+	{% endfor %}
+	</p>
+
+	<p>
+	<b>Pathologies</b><br />
+	{% for term in pathologies %}
+	<a href="?term_a={{ term.name }}">{{ term.name }}</a><br />
+	{% endfor %}
+	</p>
+
+	<p>
+	<b>Methods</b><br />
+	{% for term in methods %}
+	<a href="?term_a={{ term.name }}">{{ term.name }}</a><br />
+	{% endfor %}
+	</p>
+	</div>
+	
+	<p>
+	<b>Results for {{ term_a.name }}</b><br />
+	</p>
+	
+	<table cellpadding="3" cellspacing="0" style="border-collapse:collapse;border:1px solid black;">
+		<tr>
+			<td style="border:1px solid black;">Term A</td>
+			<td style="border:1px solid black;">Term B</td>
+			<td style="border:1px solid black;">A~B</td>
+			<td style="border:1px solid black;">B~A</td>
+			<td style="border:1px solid black;">Conjunction</td>
+			<td style="border:1px solid black;">Disjunction</td>
+			<td style="border:1px solid black;">Prob. of Association</td>
+		</tr>
+	{% for connection in connections %}
+		<tr>
+			<td style="border:1px solid black;">{{ term_a.name }}</td>
+			<td style="border:1px solid black;">{{ connection.name }} ({{ connection.category }})</td>
+			<td style="border:1px solid black;">{{ connection.a_not_b }}</td>
+			<td style="border:1px solid black;">{{ connection.b_not_a }}</td>
+			<td style="border:1px solid black;">{{ connection.conjunction }}</td>
+			<td style="border:1px solid black;">{{ connection.disjunction }}</td>
+			<td style="border:1px solid black;">{{ connection.prob_association }}</td>
+		</tr>
+	{% endfor %}
+	</table>
+
+	<table cellpadding="3" cellspacing="0">
+	<tr>
+	<td valign="top">
+	<b>Synonyms searched for {{ term_a.name }}:</b>
+	</td>
+	<td>
+	{% for synonym in term_a.synonyms %}
+		{{ synonym }},<br />
+	{% endfor %}
+	</td>
+	</tr>
+	</table>
+
+	<div id="infovis"></div>
+	<div id="inner-details"></div> 
+	<div id="log"></div>
+	
+	</body>
+</html>
