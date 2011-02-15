@@ -262,8 +262,7 @@ function makeGraph(json){
 		onTouchMove: function(node, eventInfo, e) {  
 			$jit.util.event.stop(e); //stop default touchmove event  
 			this.onDragMove(node, eventInfo, e);  
-		},  
-	},  
+		}}, 
 	//Number of iterations for the FD algorithm  
 	iterations: 200,  
 	//Edge length  

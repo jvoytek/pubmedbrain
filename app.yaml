@@ -12,6 +12,9 @@ handlers:
 - url: /css
   static_dir: css
 
+- url: /health_mapr
+  static_dir: health_mapr
+
 - url: /script
   static_dir: script
 

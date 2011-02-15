@@ -7,8 +7,7 @@
 
 $(function() {		
 
-connection_data = {'request_type': 'circ_connections', 'max_results': 20, 'term_a': '{{ term_a.name|urlencode }}'};
-getCircularGraph(connection_data);
+getCircularGraph({'request_type': 'circ_connections', 'max_results': 20, 'term_a': '{{ term_a.name|urlencode }}'});
 $('#hierarchy-trigger').click(function(){
 	$('#tree').show();
 	if ($('#tree #tree-canvaswidget').length == 0){
@@ -30,7 +29,7 @@ function getTreeGraph(tree_data) {
 		json = eval(data);
 		log(json);
 		$('#tree').empty();
-		tree(json[0])
+		tree(json[0]);
 	});
 }
 
@@ -52,7 +51,7 @@ function getCircularGraph(connection_data) {
 			}
 			term_label = $('<label></label>');
 			term_label.attr('for', 'pub_' + escape(term.data.name));
-			term_label.html(term.data.name)
+			term_label.html(term.data.name);
 			
 			$('#connection_terms').append(term_input);
 			$('#connection_terms').append(term_label);
@@ -82,14 +81,14 @@ $('#connection_data').click(function(){
 	
 	$('.pub_tag').live('click', function(){
 		//find all checked terms
-		var terms_b = []
+		var terms_b = [];
 		$('.pub_tag').each(function(i, checkbox){
 			if ($(checkbox).attr("checked") == true) {
 				terms_b.push($(this).attr('title'));
 			}
 		});
 		// concatenate all checked terms with comma
-		terms_b = terms_b.join(',')
+		terms_b = terms_b.join(',');
 		
 		//getpublications
 		getPublications('{{ term_a.name|urlencode }}', terms_b);
@@ -99,25 +98,23 @@ $('#connection_data').click(function(){
 		$('#publication-list').empty();
 		$('#publication-list').append('<p class="loading-message">Loading...</p>');
 		
-		data = {'request_type': 'esearch', 'term_a': term_a, 'term_b': terms_b};
-
-		$.post('/request', data, function(data){
-			$('#publication-list').empty()
-			data = eval(data)
+		$.post('/request', {'request_type': 'esearch', 'term_a': term_a, 'term_b': terms_b}, function(data){
+			$('#publication-list').empty();
+			data = eval(data);
 			$.each(data[0].results, function(i, publication){
 				pub_para = '<h4 class="article"><a href="http://www.ncbi.nlm.nih.gov/pubmed/' + publication.pmid + '" target="_blank">' + publication.title + '</a></h4><p class="article">';
 				$.each(publication.authors, function(j, author){
 					if (j != 0) {
-						pub_para += ", "
+						pub_para += ", ";
 					}
-					pub_para += author.lastname + " " + author.initials
+					pub_para += author.lastname + " " + author.initials;
 				});
 				pub_para += "<br />" + publication.journal + '</p>';
 				
 				//pub_para += '<div id="abstract-' + publication.pmid + '" class="abstract-preview">' + publication.abstract.substring(0, 200) + '</div>';
-				$('#publication-list').append(pub_para)
+				$('#publication-list').append(pub_para);
 			});
-			$('#publication-list').append('<p class="article"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=' + escape(data[0].search_phrase) + '" target="_blank">See more on PubMed...</a></p>')
+			$('#publication-list').append('<p class="article"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=' + escape(data[0].search_phrase) + '" target="_blank">See more on PubMed...</a></p>');
 		});
 		
 	}
@@ -157,7 +154,7 @@ $('#connection_data').click(function(){
 				$(this).show();
 			}, 
 			function(){
-				$(this).hide()
+				$(this).hide();
 			}
 		);		
 	});
