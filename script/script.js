@@ -79,7 +79,7 @@ function bar(json) {
         enable: true,
         onShow: function(tip, elem) {
           //tip.innerHTML = "<b>" + elem.label + "</b>: " + elem.value;
-          tip.innerHTML = "<div class=\"tip-text\"><b>Term:</b> " + elem.label + "<br /><b>Category:</b> " + elem.category + "<br /><b>Prob. association with search term:</b> " + elem.value + "</div>"
+          tip.innerHTML = "<div class=\"tip-text\"><b>Term:</b> " + elem.label + "<br /><b>Prob. association with search term:</b> " + elem.value + "</div>"
         }
       }
     });
@@ -94,7 +94,7 @@ function bar(json) {
     	$(div).hover(
     		function(){
     			category = getCategoryData(bar.category);
-    			$(this).css('background-color', '#' + category.color_highlight);
+    			$(this).css('background-color', '#FFFFFF');
 				ht.graph.getByName(bar.label).data.$color = '#' + category.color_highlight;
 				ht.plot();
     		}, 
@@ -328,7 +328,7 @@ function makeGraph(json){
 			category = getCategoryData(node.data.category);
 			node.data.$color = "#" + category.color_highlight;
 			barChartPrefix = barChart.canvas.viz.root.replace('$root', '');
-			$('#' + barChartPrefix + node.name.replace(/'/g, '_').replace(/ /g, '_').replace(/&#39;/g, '_')).css('background-color', '#' + category.color_highlight);
+			$('#' + barChartPrefix + node.name.replace(/'/g, '_').replace(/ /g, '_').replace(/&#39;/g, '_')).css('background-color', '#FFFFFF');
 
 			node.eachAdjacency(function(adj) { 
 				if (adj.nodeTo.data.$type == 'star' || node.data.$type == 'star') {
@@ -365,17 +365,12 @@ function makeGraph(json){
 		onTouchMove: function(node, eventInfo, e) {  
 			$jit.util.event.stop(e); //stop default touchmove event  
 			this.onDragMove(node, eventInfo, e);  
-		},
-		onDoubleClick: function(node, eventInfo, e) {
-        	window.location = 'Search?term_a=' + node.name;		
-		}  
+		} 
 	},  
     //Ths method is called when moving/placing a label.  
     //Add label styles based on their position.  
     onPlaceLabel: function(domElement, node){  
-        log(node);
         $(domElement).dblclick(function(){
-        	log('doublecliked!');
         	window.location = 'Search?term_a=' + node.name;
         });
         var style = domElement.style;  
@@ -396,7 +391,6 @@ function makeGraph(json){
         var w = domElement.offsetWidth;  
         style.left = (left - w / 2) + 'px';  
     }
-
 });  
 
 
@@ -406,6 +400,7 @@ ht.loadJSON(json);
  
 //Compute positions and plot.  
 ht.refresh(); 
+log(ht);
 
 }
 

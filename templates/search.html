@@ -10,7 +10,7 @@ $(function() {
 
 	// Get circular network graph data and plot
 	getCircularGraph({'request_type': 'circ_connections', 'max_results': 19, 'term_a': '{{ term_a.name|urlencode }}'}, '{{ term_a.name|urlencode }}');
-	getBarChart({'request_type': 'bar_data', 'max_results': 1000, 'term_a': '{{ term_a.name|urlencode }}'}, '{{ term_a.name|urlencode }}');
+	getBarChart({'request_type': 'bar_data', 'max_results': 100, 'term_a': '{{ term_a.name|urlencode }}'}, '{{ term_a.name|urlencode }}');
 		
 	// Set up UI
 	$('#graphs').tabs();

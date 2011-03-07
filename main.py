@@ -345,7 +345,7 @@ class Request(webapp.RequestHandler):
 				i = 0
 				calcStart = datetime.datetime.now()
 				
-				connection_json = [{'id': term_a[0].name, 'name': term_a[0].name, 'data': {'$dim': 25, '$color': term_a[0].color, 'category': term_a[0].category, 'prob_association': '1', '$type': 'star'}, 'adjacencies': []}]
+				connection_json = [{'id': term_a[0].name, 'name': term_a[0].name, 'data': {'$dim': 25, '$color': term_a[0].color, 'category': term_a[0].category, 'prob_association': 1, '$type': 'star'}, 'adjacencies': []}]
 				
 				for connection in connections:
 					term_keys = list(connection.term_keys)
@@ -495,10 +495,10 @@ class Request(webapp.RequestHandler):
 					
 					if term_a[0].category != 'silly' and term_b.category != 'silly':
 						connection_json[0]['label'].append(term_b.name)
-						connection_json[0]['values'].append({'label': term_b.name, 'values': [round(connection.prob_association, 4)], 'color': [getColor(term_b.category)], 'category': term_b.category})
+						connection_json[0]['values'].append({'label': term_b.name, 'values': [round(connection.prob_association, 4)], 'category': term_b.category, 'color': [getColor(term_b.category)]})
 					elif term_a[0].category == 'silly':
 						connection_json[0]['label'].append(term_b.name)
-						connection_json[0]['values'].append({'label': term_b.name, 'values': [round(connection.prob_association, 4)], 'color': [getColor(term_b.category)], 'category': term_b.category})
+						connection_json[0]['values'].append({'label': term_b.name, 'values': [round(connection.prob_association, 4)], 'category': term_b.category, 'color': [getColor(term_b.category)]})
 				
 						
 			# Render and Return JSON to requesting script
