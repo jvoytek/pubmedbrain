@@ -10085,7 +10085,7 @@ $jit.AreaChart = new Class({
       var valArray = $.zip(valLeft, valRight);
       var acumLeft = 0, acumRight = 0;
       ch.push({
-        'id': prefix + val.label,
+        'id': prefix + val.label.replace(/'/g, '_').replace(/ /g, '_').replace(/&#39;/g, '_'),
         'name': val.label,
         'data': {
           'value': valArray,
@@ -11019,7 +11019,7 @@ $jit.BarChart = new Class({
       var valArray = $.splat(values[i].values);
       var acum = 0;
       ch.push({
-        'id': prefix + val.label,
+        'id': prefix + val.label.replace(/'/g, '_').replace(/ /g, '_').replace(/&#39;/g, '_'),
         'name': val.label,
         'data': {
           'value': valArray,
@@ -12518,7 +12518,7 @@ $jit.PieChart = new Class({
       var val = values[i];
       var valArray = $.splat(val.values);
       ch.push({
-        'id': prefix + val.label,
+        'id': prefix + val.label.replace(/'/g, '_').replace(/ /g, '_').replace(/&#39;/g, '_'),
         'name': val.label,
         'data': {
           'value': valArray,

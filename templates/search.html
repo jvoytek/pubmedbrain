@@ -1,84 +1,57 @@
 {% extends "base_template.html" %}
 
 {% block script %}
+		<script language="javascript" type="text/javascript" src="/script/search.js"></script>
 		<script languge="javascript">
 
 {% if term_a.name %}
 
 $(function() {		
 
-getCircularGraph({'request_type': 'circ_connections', 'max_results': 20, 'term_a': '{{ term_a.name|urlencode }}'});
-$('#hierarchy-trigger').click(function(){
-	$('#tree').show();
-	if ($('#tree #tree-canvaswidget').length == 0){
-		getTreeGraph({'request_type': 'tree_connections', 'max_results': 4, 'term_a': '{{ term_a.name|urlencode }}'});
-	}
-});
-$('#circular-trigger').click(function(){
-	$('#infovis').show();
-	if ($('#infovis #infovis-canvaswidget').length == 0){
-		getCircularGraph({'request_type': 'circ_connections', 'max_results': 20, 'term_a': '{{ term_a.name|urlencode }}'});
-	}
-});
-
-$('#tree-control').buttonset();
-$('#graphs').tabs();
-
-function getTreeGraph(tree_data) {
-	$.post('/request', tree_data, function(data){
-		json = eval(data);
-		log(json);
-		$('#tree').empty();
-		tree(json[0]);
-	});
-}
-
-function getCircularGraph(connection_data) {
-	$.post('/request', connection_data, function(data){
-		json = eval(data);
-		log(json);
-		init(json);
-	
+	// Get circular network graph data and plot
+	getCircularGraph({'request_type': 'circ_connections', 'max_results': 19, 'term_a': '{{ term_a.name|urlencode }}'}, '{{ term_a.name|urlencode }}');
+	getBarChart({'request_type': 'bar_data', 'max_results': 1000, 'term_a': '{{ term_a.name|urlencode }}'}, '{{ term_a.name|urlencode }}');
 		
-		$.each(json[0].adjacencies, function(index, term){
-			term_input = $('<input></input>');
-			term_input.attr('type', 'checkbox');
-			term_input.addClass('pub_tag');
-			term_input.attr('id', 'pub_' + escape(term.data.name));
-			term_input.attr('title', escape(term.data.name));
-			if (index == 0) {
-				term_input.attr('checked', 'checked');
-			}
-			term_label = $('<label></label>');
-			term_label.attr('for', 'pub_' + escape(term.data.name));
-			term_label.html(term.data.name);
-			
-			$('#connection_terms').append(term_input);
-			$('#connection_terms').append(term_label);
-			term_input.button({
-				icons: {
-					primary: "ui-icon-check"
-				}
-			});
-		});
-	
-		
-		getPublications('{{ term_a.name|urlencode }}', json[0].adjacencies[0].data.name);
-	
-		
-	});
-}
-
-$('#connection_data').click(function(){
-	getDataTable('{{ term_a.name|urlencode }}');
-});
-
-	
+	// Set up UI
+	$('#graphs').tabs();
+	$('#tree-control').buttonset();
 	$('#circular-key, #tree-key').draggable();
-	
-	//$("#graphs").tabs();
 	$("#data-table").accordion({collapsible: true, autoHeight: false});
+
+	// Add click handlers to buttons
+	$('#hierarchy-trigger').click(function(){
+		$('#tree').show();
+		if ($('#tree #tree-canvaswidget').length == 0){
+			getTreeGraph({'request_type': 'tree_connections', 'max_results': 4, 'term_a': '{{ term_a.name|urlencode }}'});
+		}
+	});
+	$('#circular-trigger').click(function(){
+		$('#infovis').show();
+		if ($('#infovis #infovis-canvaswidget').length == 0){
+			getCircularGraph({'request_type': 'circ_connections', 'max_results': 19, 'term_a': '{{ term_a.name|urlencode }}'}, '{{ term_a.name|urlencode }}');
+		}
+	});
+
+	// Set up filtering functionality
 	
+	categories = [];
+	{% for category in categories %}
+	categories.push({name: '{{ category.name }}', color: '{{ category.color }}', color_highlight: '{{ category.color_highlight }}'});
+	{% endfor %}
+	
+	{% for category in categories %}
+		{% ifnotequal category.name 'silly'%}
+	$('#key-{{ category.name }}').toggle(
+		function(){filterCircularGraphByCategory($(this), '{{ term_a.name|urlencode }}', false);},
+		function(){filterCircularGraphByCategory($(this), '{{ term_a.name|urlencode }}', true);}
+	); 
+		{% endifnotequal %}
+	{% endfor %}
+
+	$('#connection_data').click(function(){
+		getDataTable('{{ term_a.name|urlencode }}');
+	});
+
 	$('.pub_tag').live('click', function(){
 		//find all checked terms
 		var terms_b = [];
@@ -93,72 +66,7 @@ $('#connection_data').click(function(){
 		//getpublications
 		getPublications('{{ term_a.name|urlencode }}', terms_b);
 	});
-	
-	function getPublications(term_a, terms_b) {
-		$('#publication-list').empty();
-		$('#publication-list').append('<p class="loading-message">Loading...</p>');
-		
-		$.post('/request', {'request_type': 'esearch', 'term_a': term_a, 'term_b': terms_b}, function(data){
-			$('#publication-list').empty();
-			data = eval(data);
-			$.each(data[0].results, function(i, publication){
-				pub_para = '<h4 class="article"><a href="http://www.ncbi.nlm.nih.gov/pubmed/' + publication.pmid + '" target="_blank">' + publication.title + '</a></h4><p class="article">';
-				$.each(publication.authors, function(j, author){
-					if (j != 0) {
-						pub_para += ", ";
-					}
-					pub_para += author.lastname + " " + author.initials;
-				});
-				pub_para += "<br />" + publication.journal + '</p>';
 				
-				//pub_para += '<div id="abstract-' + publication.pmid + '" class="abstract-preview">' + publication.abstract.substring(0, 200) + '</div>';
-				$('#publication-list').append(pub_para);
-			});
-			$('#publication-list').append('<p class="article"><a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=' + escape(data[0].search_phrase) + '" target="_blank">See more on PubMed...</a></p>');
-		});
-		
-	}
-	
-	function getDataTable(term_a) {
-		$('#connection_data_table').empty();
-		$('#connection_data_table').append('<tr><td style="border:1px solid black;"><p class="loading-message">Loading...</p></td></tr>');
-		connection_data = {'request_type': 'circ_connection_data', 'max_results': 1000, 'term_a': term_a};
-		$.post('/request', connection_data, function(data) {
-			data = eval(data);
-			log(data);
-			
-			$('#connection_data_table').empty();
-			table_row = $('<tr></tr>');
-			table_row.append('<td style="border:1px solid black;">Term B</td>');			
-			table_row.append('<td style="border:1px solid black;">Conjunction</td>');		
-			table_row.append('<td style="border:1px solid black;">Disjunction</td>');		
-			table_row.append('<td style="border:1px solid black;">Prob. Of Association</td>');
-			$('#connection_data_table').append(table_row);		
-	
-			$.each(data, function(index, term){
-				table_row = $('<tr></tr>');
-				table_row.append('<td style="border:1px solid black;">' + term.term_b + '</td>');			
-				table_row.append('<td style="border:1px solid black;">' + term.conjunction + '</td>');		
-				table_row.append('<td style="border:1px solid black;">' + term.disjunction + '</td>');		
-				table_row.append('<td style="border:1px solid black;">' + term.prob_association + '</td>');
-				$('#connection_data_table').append(table_row);		
-			});
-		});
-	
-	}
-	
-	$('.abstract-trigger').live('mouseover mouseout', function(){
-		pmid = $(this).attr('for')
-		$('#abstract-' + pmid).toggle(
-			function(){
-				$(this).show();
-			}, 
-			function(){
-				$(this).hide();
-			}
-		);		
-	});
-		
 });
 {% endif %}
 
@@ -199,15 +107,13 @@ $('#connection_data').click(function(){
 		<li><a href="#hierarchy" id="hierarchy-trigger">Hierarchical Graph</a></li>
 	</ul>
 	<div id="circular">
-	<!-- <input id="removeStructures" type="button" value="Remove Structures" />
-	<input id="removeMethods" type="button" value="Remove Methods" />
-	<input id="refresh" type="button" value="Refresh" />-->
 	<div id="circular-key">
+	<b>Click term categories to filter:</b>
 	<img src="/images/star.png" alt="star" style="float:left;" width="20" height="21" /> Search Term<br />
 	<span style="clear:both;display:block">
 	{% for category in categories %}
 		{% ifnotequal category.name 'silly'%}
-		<div class="key-color" style="background-color:#{{ category.color }}"><img src="/images/circle-mask.png" alt="circle mask" width="16" height="16" /></div>{{ category.title }}<br />
+		<div class="key-color" style="background-color:#{{ category.color }}"><img src="/images/circle-mask.png" alt="circle mask" width="16" height="16" /></div><span id="key-{{ category.name }}" class="key-category">{{ category.title }}</span><br />
 		{% endifnotequal %}
 	{% endfor %}
 	</span>
@@ -218,6 +124,7 @@ $('#connection_data').click(function(){
 	(width of line indicates strength of prob. association)
 	</div>
 	<div id="infovis"><span class="loading-message">Loading<img src="/images/elipse_animated.gif" width="29" height="5" style="display:inline" alt="..." /></span></div>
+	<div id="bar-chart"><p id="bar-chart-title">Probable Association with Search Term</p></div>
 	</div>
 	<div id="hierarchy">
 	<div id="tree-control">

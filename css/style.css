@@ -100,12 +100,32 @@ body {
 }
 
 #infovis {
-	height: 600px;
+	height: 501px;
 	margin: 5px 0 0 0;
 	overflow: hidden;
 	position: relative;
 	background-color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+}
+
+#bar-chart {
+	height: 100px;
+	margin: -1px 0 0 0;
+	overflow: hidden;
+	position: relative;
+	background-color: #333333;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-image: url('/css/brainscanr/images/ui-bg_diagonals-small_15_333333_40x40.png');
+}
+
+#bar-chart-title {
+	color: #FFFFFF;
+	margin: 5px 0px 0px 5px;
+	font-size: 12px;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	line-height: 12px;
 }
 
 #tree {
@@ -126,7 +146,7 @@ body {
 .node {
 	font-size: 12px;
 	font-family: Helvetica, Arial, Verdana, sans-serif;
-	line-height: 12px;
+	line-height: 1em;
 }
 
 #circular-key {
@@ -162,6 +182,18 @@ body {
 	height: 16px;
 	margin: 2px 3px 2px 0px;
 	float: left;
+}
+
+.key-category {
+	cursor: pointer;
+}
+
+.key-category:hover {
+	text-decoration: underline;
+}
+
+.key-category-hidden {
+	color: #CCCCCC;
 }
 
 .center {

@@ -40,6 +40,7 @@ class CategoryModel(db.Model):
 	created = db.DateTimeProperty(auto_now_add=True)
 	name = db.StringProperty()		# short no-spaces lowercase name
 	title = db.StringProperty()		# human readable name
-	color = db.StringProperty()		# hex value
+	color = db.StringProperty()		# hex value (no #)
+	color_highlight = db.StringProperty()		# hex value (no #)
 	description = db.TextProperty()	# human readable description of this category
 	

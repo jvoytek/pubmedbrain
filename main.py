@@ -70,12 +70,14 @@ class AddCategory(webapp.RequestHandler):
 		title = self.request.get('title')
 		name = self.request.get('name')
 		color = self.request.get('color')
+		color_highlight = self.request.get('color_highlight')
 		description = self.request.get('description')
 		
 		category = datamodels.CategoryModel()
 		category.title = title		
 		category.name = name		
 		category.color = color		
+		category.color_highlight = color_highlight		
 		category.description = description
 		category.put()				
 		
@@ -314,6 +316,9 @@ class Request(webapp.RequestHandler):
 		elif request_type == 'circ_connections':
 				
 			max_results = int(self.request.get('max_results'))
+			category_filters = self.request.get('category_filter')
+			if len(category_filters) > 0:
+				category_filters = string.split(category_filters, ',')
 			
 						
 			terms = Term()
@@ -346,45 +351,54 @@ class Request(webapp.RequestHandler):
 					term_keys = list(connection.term_keys)
 					term_keys.remove(term_a[0].key())
 					term_b = datamodels.TermModel.all().filter('__key__ =', term_keys[0]).fetch(1)
+					
 					if len(term_b) > 0:
 						term_b = term_b[0]
 					
-					
-					connection.connections = []	
-					if connections[0].prob_association > 0:
-						connection.weight = ((connection.prob_association / connections[0].prob_association) * 4) + 1
-						connection.alpha = (connection.prob_association / connections[0].prob_association) + .2
-					else:
-						connection.weight = 1
-						connection.alpha = 1
+						if len(category_filters) > 0:
+							if term_b.category in category_filters:
+								add_term = True
+							else:
+								add_term = False
+						else:
+							add_term = True
 						
+						if add_term == True:
+							connection.connections = []	
+							if connections[0].prob_association > 0:
+								connection.weight = ((connection.prob_association / connections[0].prob_association) * 4) + 1
+								connection.alpha = 1
+							else:
+								connection.weight = 1
+								connection.alpha = 1
+								
+		
+							# find connection from term_b to to other term_b's
+							terms_c.append(term_b)
+		
+							for term_c in terms_c:
+								if term_c.name != term_b.name:
+									connection_c = datamodels.ConnectionModel.all().filter('term_keys =', term_c.key()).filter('term_keys =', term_b.key()).fetch(1)
+									if len(connection_c) > 0:
+										if connection_c[0].prob_association > 0:
+											connection_c[0].weight = ((connection_c[0].prob_association / connections[0].prob_association) * 4) + 1
+											if connection_c[0].weight > 5:
+												connection_c[0].weight = 5
+												
+											connection_c[0].name = term_c.name
+											connection_c[0].alpha = 1
+										else:
+											connection_c[0].weight = 1
+											connection_c[0].alpha = 1
+											connection_c[0].name = term_c.name
 
-					# find connection from term_b to to other term_b's
-					terms_c.append(term_b)
-
-					for term_c in terms_c:
-						if term_c.name != term_b.name:
-							connection_c = datamodels.ConnectionModel.all().filter('term_keys =', term_c.key()).filter('term_keys =', term_b.key()).fetch(1)
-							if len(connection_c) > 0:
-								if connections[0].prob_association > 0:
-									connection_c[0].weight = ((connection_c[0].prob_association / connections[0].prob_association) * 4) + 1
-									if connection_c[0].weight > 5:
-										connection_c[0].weight = 5
-										
-									connection_c[0].name = term_c.name
-									connection_c[0].alpha = (connection_c[0].prob_association / connections[0].prob_association) + .2
-								else:
-									connection_c[0].weight = 1
-									connection_c[0].name = term_c.name
-									connection_c[0].alpha = .2
-
-								connection.connections.append({'nodeTo': connection_c[0].name, 'data': {'$lineWidth': connection_c[0].weight, '$alpha': connection_c[0].alpha, '$color': '#CCCCCC'}})
-					i += 1
-						
-					# add data to connection json
-					connection_json[0]['adjacencies'].append({'nodeTo': term_b.name, 'data': {'$lineWidth': connection.weight, 'name': term_b.name, '$alpha': connection.alpha}})
-					
-					connection_json.append({'id': term_b.name, 'name': term_b.name, 'data': {'$dim': 10, '$color': getColor(term_b.category), 'category': term_b.category, 'prob_association': round(connection.prob_association, 4)}, 'adjacencies': connection.connections })
+										connection.connections.append({'nodeTo': connection_c[0].name, 'data': {'$lineWidth': connection_c[0].weight, '$alpha': connection_c[0].alpha, '$color': '#CCCCCC'}})
+							i += 1
+								
+							# add data to connection json
+							connection_json[0]['adjacencies'].append({'nodeTo': term_b.name, 'data': {'$lineWidth': connection.weight, 'name': term_b.name, '$alpha': connection.alpha}})
+							
+							connection_json.append({'id': term_b.name, 'name': term_b.name, 'data': {'$dim': 10, '$color': getColor(term_b.category), 'category': term_b.category, 'prob_association': round(connection.prob_association, 4)}, 'adjacencies': connection.connections })
 
 				logging.info("calcTime: %s", (datetime.datetime.now() - calcStart))
 				message = ''
@@ -436,6 +450,55 @@ class Request(webapp.RequestHandler):
 						connection_json.append({'term_b': term_b.name, 'conjunction': connection.conjunction, 'disjunction': connection.disjunction, 'prob_association': connection.prob_association})
 					elif term_a[0].category == 'silly':
 						connection_json.append({'term_b': term_b.name, 'conjunction': connection.conjunction, 'disjunction': connection.disjunction, 'prob_association': connection.prob_association})
+				
+						
+			# Render and Return JSON to requesting script
+			self.response.out.write(simplejson.dumps(connection_json))
+
+		#
+		# connection_data - returns JSON of connection data for the max_results
+		#
+		elif request_type == 'bar_data':
+			max_results = int(self.request.get('max_results'))
+			
+						
+			terms = Term()
+			template_values = terms.GetTerms('all')
+			
+			# get term_a data model object
+			if self.request.get('term_a') != '':
+				term_a_name = urllib.unquote(self.request.get('term_a'))
+			else:
+				term_a_name = template_values['categories'][4]['terms'][0].name
+	
+			term_a = datamodels.TermModel.all().filter('name_lower =', term_a_name.lower()).fetch(1)
+			if len(term_a) == 0:
+				term_a = datamodels.TermModel.all().filter('synonyms_lower =', term_a_name.lower()).fetch(1)
+				if len(term_a) == 0:
+					term_a = datamodels.TermModel.all().filter('acronyms_lower =', term_a_name.lower()).fetch(1)
+			
+			if len(term_a) > 0:
+				# get connections
+				connections = datamodels.ConnectionModel.all().filter('term_keys =', term_a[0].key()).filter('prob_association >', 0.0).order('-prob_association').fetch(max_results)
+				
+				i = 0
+				calcStart = datetime.datetime.now()
+				
+				connection_json = [{'label': [], 'values': [], 'color': ['#333333']}]
+				
+				for connection in connections:
+					term_keys = list(connection.term_keys)
+					term_keys.remove(term_a[0].key())
+					term_b = datamodels.TermModel.all().filter('__key__ =', term_keys[0]).fetch(1)
+					if len(term_b) > 0:
+						term_b = term_b[0]
+					
+					if term_a[0].category != 'silly' and term_b.category != 'silly':
+						connection_json[0]['label'].append(term_b.name)
+						connection_json[0]['values'].append({'label': term_b.name, 'values': [round(connection.prob_association, 4)], 'color': [getColor(term_b.category)], 'category': term_b.category})
+					elif term_a[0].category == 'silly':
+						connection_json[0]['label'].append(term_b.name)
+						connection_json[0]['values'].append({'label': term_b.name, 'values': [round(connection.prob_association, 4)], 'color': [getColor(term_b.category)], 'category': term_b.category})
 				
 						
 			# Render and Return JSON to requesting script
@@ -647,7 +710,7 @@ class Term():
 			
 			for category in categories:
 				terms = datamodels.TermModel.all().filter('category =', category.name).order('name').fetch(1000)
-				values.append(dict([('name', category.name), ('terms', terms), ('title', category.title), ('color', category.color)]))
+				values.append(dict([('name', category.name), ('terms', terms), ('title', category.title), ('color', category.color), ('color_highlight', category.color_highlight)]))
 			
 			return {'categories': values}
 
@@ -781,7 +844,7 @@ class QueueAddLower(webapp.RequestHandler):
 			if len(term) > 0:
 				term = term[0]
 			term_obj = Term();
-			term_obj.NameSynonymsToLower(term)
+			term_obj.NameSynonymsAcronymsToLower(term)
 			logging.info('Lower: %s' % term_name)
 			
 class QueueTermList(webapp.RequestHandler):
