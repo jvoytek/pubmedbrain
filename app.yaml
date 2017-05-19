@@ -1,0 +1,13 @@
+# [START runtime]
+application: pubmedbrain
+version: 2
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT mysite.wsgi
+
+beta_settings:
+    cloud_sql_instances: brainscanr:us-central1:brainscanr
+
+runtime_config:
+  python_version: 3
+# [END runtime]

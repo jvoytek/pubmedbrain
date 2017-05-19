@@ -1,0 +1,7734 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "brainscanr",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "brainscanr",
+        "model": "term"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "brainscanr",
+        "model": "connection"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jlxjc2ltt88t1obxnq2cebjog4tgg2kb",
+    "fields": {
+        "session_data": "YzM0YzE1OTA1NWQ2ODYyMDk2OTZlMWVkODU2YjBjNzE0MTZlNGM1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjhjNWM4NTQxMmNiOTBjYTU5OGU2M2JhMDY2NTc4YzE3NzY3NjM5MTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-05-11T17:46:23.881Z"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 1,
+    "fields": {
+        "created": "2017-04-27T21:10:14.502Z",
+        "name": "structure",
+        "title": "Structure",
+        "color": "bbba09",
+        "color_highlight": "fbfa05",
+        "description": "A structure"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 2,
+    "fields": {
+        "created": "2017-04-27T21:10:59.264Z",
+        "name": "method",
+        "title": "Method",
+        "color": "f7941d",
+        "color_highlight": "fc7203",
+        "description": "A method"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 3,
+    "fields": {
+        "created": "2017-04-27T21:11:33.143Z",
+        "name": "white_matter",
+        "title": "White Matter",
+        "color": "c1f3f5",
+        "color_highlight": "57f0f6",
+        "description": "White matter"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 4,
+    "fields": {
+        "created": "2017-04-27T21:12:00.682Z",
+        "name": "function",
+        "title": "Function",
+        "color": "fb5e51",
+        "color_highlight": "fc1c0a",
+        "description": "A function"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 5,
+    "fields": {
+        "created": "2017-04-27T21:14:08.904Z",
+        "name": "drug",
+        "title": "Drug",
+        "color": "6bd67b",
+        "color_highlight": "04fa61",
+        "description": "A drug"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 6,
+    "fields": {
+        "created": "2017-04-27T21:14:37.653Z",
+        "name": "neurochemical",
+        "title": "Neurochemical",
+        "color": "6a84d7",
+        "color_highlight": "3d68f3",
+        "description": "A neurochemical"
+    }
+},
+{
+    "model": "brainscanr.category",
+    "pk": 7,
+    "fields": {
+        "created": "2017-04-27T21:15:05.764Z",
+        "name": "pathology",
+        "title": "Pathology",
+        "color": "b65cb3",
+        "color_highlight": "e118da",
+        "description": "A pathology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 2,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 2,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 2,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 3,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 3,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 3,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can add category",
+        "content_type": 7,
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can change category",
+        "content_type": 7,
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can delete category",
+        "content_type": 7,
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can add term",
+        "content_type": 8,
+        "codename": "add_term"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can change term",
+        "content_type": 8,
+        "codename": "change_term"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can delete term",
+        "content_type": 8,
+        "codename": "delete_term"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add connection",
+        "content_type": 9,
+        "codename": "add_connection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change connection",
+        "content_type": 9,
+        "codename": "change_connection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete connection",
+        "content_type": 9,
+        "codename": "delete_connection"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$8bGoPSCYZG6A$dCVcVKIBUPC0YtwM81zpTH4iD1g4jgIBBStm2ISPSvQ=",
+        "last_login": "2017-04-27T17:46:23.554Z",
+        "is_superuser": true,
+        "username": "jvoytek",
+        "first_name": "",
+        "last_name": "",
+        "email": "jessica.voytek@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-04-27T17:45:42.107Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-04-27T21:10:14.595Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-04-27T21:10:59.357Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-04-27T21:11:33.244Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-04-27T21:12:00.788Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-04-27T21:13:45.606Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Category object",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-04-27T21:14:09.018Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-04-27T21:14:37.747Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2017-04-27T21:15:05.857Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Category object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Bell's palsy",
+      "category": "pathology",
+      "synonyms": ["Bell's palsy"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "fear",
+      "category": "function",
+      "synonyms": ["fear"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "color discrimination",
+      "category": "function",
+      "synonyms": ["colour discrimination"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "processing capacity",
+      "category": "function",
+      "synonyms": ["processing capacity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Dandy-Walker syndrome",
+      "category": "pathology",
+      "synonyms": ["Dandy-Walker"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual extrastriate",
+      "category": "structure",
+      "synonyms": ["visual extrastriate cortices","visual extrastriate cortex"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medial geniculate body",
+      "category": "structure",
+      "synonyms": ["Nucleus geniculatus medialis","Nucleus corporis geniculati medialis","medial geniculate nucleus","medial geniculate bodies","medial geniculate nuclei","Corpus geniculatus medialis","Corpus geniculatum mediale","medial geniculate body"],
+      "acronyms": ["MGB","MGN"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotional recognition",
+      "category": "function",
+      "synonyms": ["emotion recognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "prospective memory",
+      "category": "function",
+      "synonyms": ["prospective memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "vestibular nuclei",
+      "category": "structure",
+      "synonyms": ["vestibular nucleus","vestibular nuclear complex","Nuclei vestibulares","vestibular nuclei"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotional perception",
+      "category": "function",
+      "synonyms": ["emotion perceptions","emotion perception","emotional perceptions"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "habit learning",
+      "category": "function",
+      "synonyms": ["habit learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "word identification",
+      "category": "function",
+      "synonyms": ["word identification"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "antisocial personality disorder",
+      "category": "pathology",
+      "synonyms": ["antisocial personality"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotional suppression",
+      "category": "function",
+      "synonyms": ["emotion suppression"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "episodic buffer",
+      "category": "function",
+      "synonyms": ["episodic buffer"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "affect perception",
+      "category": "function",
+      "synonyms": ["affect perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lexical encoding",
+      "category": "function",
+      "synonyms": ["lexical encoding"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "empathy",
+      "category": "function",
+      "synonyms": ["empathic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "declarative knowledge",
+      "category": "function",
+      "synonyms": ["declarative knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "task switching",
+      "category": "function",
+      "synonyms": ["task switching"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual memory",
+      "category": "function",
+      "synonyms": ["visual memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "angular gyrus",
+      "category": "structure",
+      "synonyms": ["preoccipital gyrus","Gyrus angularis","angular gyri","angular gyrus","Gyrus parietalis inferior","middle part of inferior parietal lobule","prelunate gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hypoglossal nucleus",
+      "category": "structure",
+      "synonyms": "—",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "episodic learning",
+      "category": "function",
+      "synonyms": ["episodic learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "eye movement",
+      "category": "function",
+      "synonyms": ["eye movements"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "memory storage",
+      "category": "function",
+      "synonyms": ["memory storage"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "theory of mind",
+      "category": "function",
+      "synonyms": ["theory of mind"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual search",
+      "category": "function",
+      "synonyms": ["visual search"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "episodic memory",
+      "category": "function",
+      "synonyms": ["episodic memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "go/no-go",
+      "category": "function",
+      "synonyms": ["go/no-go"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "autobiographical recall",
+      "category": "function",
+      "synonyms": ["autobiographical recall"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "edge detection",
+      "category": "function",
+      "synonyms": ["edge detection"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "error detection",
+      "category": "function",
+      "synonyms": ["error detection"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "social cognition",
+      "category": "function",
+      "synonyms": ["social cognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "traumatic memory",
+      "category": "function",
+      "synonyms": ["traumatic memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "solitary nucleus",
+      "category": "structure",
+      "synonyms": ["solitary nuclei","solitary nuclear complex","Nucleus tractus solitarii","Nucleus tracti solitarii","nucleus of tractus solitarius","nucleus of the solitary tract","nucleus of solitary tract","Nucleus fasciculus solitarius","Nuclei tractus solitarii"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "episodic recall",
+      "category": "function",
+      "synonyms": ["episodic recall"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "feature detection",
+      "category": "function",
+      "synonyms": ["feature detection"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "memory trace",
+      "category": "function",
+      "synonyms": ["memory traces"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "abstract thinking",
+      "category": "function",
+      "synonyms": ["abstract thinking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "altruism",
+      "category": "function",
+      "synonyms": ["altruistic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "stress",
+      "category": "pathology",
+      "synonyms": ["stress"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological loop",
+      "category": "function",
+      "synonyms": ["phonological loop"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "reconsolidation",
+      "category": "function",
+      "synonyms": ["reconsolidation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "semantic working memory",
+      "category": "function",
+      "synonyms": ["semantic working memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "second auditory area",
+      "category": "structure",
+      "synonyms": ["second auditory cortices","second auditory cortex","second auditory area"],
+      "acronyms": ["A2","AII"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "executive control",
+      "category": "function",
+      "synonyms": ["executive control"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "automaticity",
+      "category": "function",
+      "synonyms": ["automaticity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "classical conditioning",
+      "category": "function",
+      "synonyms": ["classical conditioning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sequence learning",
+      "category": "function",
+      "synonyms": ["sequence learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medial dorsal nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus thalamicus mediodorsalis","Nucleus mediodorsalis thalami","Nucleus medialis dorsalis thalami","Nucleus medialis dorsalis","Nucleus dorsomedialis thalami","Nuclei mediales thalami","mediodorsal thalamic nucleus","mediodorsal nucleus","mediod"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "acoustic processing",
+      "category": "function",
+      "synonyms": ["acoustic processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "facial expression",
+      "category": "function",
+      "synonyms": ["facial expression"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inductive reasoning",
+      "category": "function",
+      "synonyms": ["inductive reasoning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "locus ceruleus",
+      "category": "structure",
+      "synonyms": ["Substantia ferruginea","Nucleus pigmentosus pontis","nucleus of locus caeruleus","Locus caeruleus","Locus coeruleus","locus ceruleus"],
+      "acronyms": ["LC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "executive function",
+      "category": "function",
+      "synonyms": ["executive functions"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "apparent movement",
+      "category": "function",
+      "synonyms": ["apparent movement"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive map",
+      "category": "function",
+      "synonyms": ["cognitive maps"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visuospatial sketch pad",
+      "category": "function",
+      "synonyms": ["visuospatial sketch pad"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "action imitation",
+      "category": "function",
+      "synonyms": ["action imitation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "logical thinking",
+      "category": "function",
+      "synonyms": ["logical thinking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "context memory",
+      "category": "function",
+      "synonyms": ["context memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "perceptual learning",
+      "category": "function",
+      "synonyms": ["perceptual learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "functional magnetic resonance imaging",
+      "category": "method",
+      "synonyms": ["functional magnetic resonance","fMRI"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "nucleus ambiguus",
+      "category": "structure",
+      "synonyms": ["Nucleus innominatus","ambiguus nucleus","ambiguus nuclei","nucleus ambiguus","Nucleus ambiguus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "globus pallidus",
+      "category": "structure",
+      "synonyms": ["pallidum","Nucleus pallidus","globus pallidus","paleostriatum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "explicit knowledge",
+      "category": "function",
+      "synonyms": ["explicit knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "articulatory loop",
+      "category": "function",
+      "synonyms": ["articulatory loop"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hallucination",
+      "category": "function",
+      "synonyms": ["hallucinatory","hallucinations"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "backward masking",
+      "category": "function",
+      "synonyms": ["backward masking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "introspection",
+      "category": "function",
+      "synonyms": ["introspective"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "spatial cognition",
+      "category": "function",
+      "synonyms": ["spatial cognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "target processing",
+      "category": "function",
+      "synonyms": ["target processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "red nucleus",
+      "category": "structure",
+      "synonyms": ["red nuclei","Nucleus ruber tegmenti","Nucleus ruber","Nucleus rotundus subthalamo-peduncularis","red nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "suprachiasmatic nucleus",
+      "category": "structure",
+      "synonyms": ["suprachiasmatic nuclei","Nucleus suprachiasmaticus hypothalami"],
+      "acronyms": ["SCN"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "explicit learning",
+      "category": "function",
+      "synonyms": ["explicit learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "affect recognition",
+      "category": "function",
+      "synonyms": ["affect recognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "stop signal",
+      "category": "function",
+      "synonyms": ["stop signal"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "primary auditory area",
+      "category": "structure",
+      "synonyms": ["primary auditory cortices","primary auditory cortex","primary auditory area"],
+      "acronyms": ["A1","AI"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cochlear nuclei",
+      "category": "structure",
+      "synonyms": ["Nuclei cochleares","cochlear nucleus","cochlear nuclei"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "action initiation",
+      "category": "function",
+      "synonyms": ["action initiation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "behavioral inhibition",
+      "category": "function",
+      "synonyms": ["behavioural inhibition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Iowa Gambling",
+      "category": "function",
+      "synonyms": ["Iowa Gambling"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "somatosensation",
+      "category": "function",
+      "synonyms": ["touch"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "primary motor cortex",
+      "category": "structure",
+      "synonyms": ["primary motor cortices","precentral motor cortex","precentral motor area","motor strip","motor cortices","motor cortex","motor area","primary motor area"],
+      "acronyms": ["M1","MI"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "action selection",
+      "category": "function",
+      "synonyms": ["action selection"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "appetitive motivation",
+      "category": "function",
+      "synonyms": ["appetitive motivation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "agnosia",
+      "category": "pathology",
+      "synonyms": ["agnosic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "parahippocampal gyrus",
+      "category": "structure",
+      "synonyms": ["parahippocampal gyri","hippocampal gyrus","hippocampal gyri","Gyrus parahippocampi","Gyrus parahippocampalis","Gyrus hippocampi","parahippocampal gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Tay-Sachs disease",
+      "category": "pathology",
+      "synonyms": ["Tay-Sachs"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dorsal motor nucleus of the vagus nerve",
+      "category": "structure",
+      "synonyms": ["Nucleus vagalis dorsalis","Nucleus dorsalis motorius nervi vagi","dorsal nucleus of vagus nerve","dorsal motor nuclei","dorsal efferent nucleus of vagus","dorsal motor nucleus","dorsal vagal nucleus","Nucleus alaris","Nucleus dorsalis nervi vagi"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "transverse temporal gyrus",
+      "category": "structure",
+      "synonyms": ["Heschl's gyrus","transverse temporal gyri","Heschl's gyri","gyri of Heschl","convolutions of Heschl","Gyri temporales transversi","Heschl's convolutions"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "action observation",
+      "category": "function",
+      "synonyms": ["action observation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "deductive inference",
+      "category": "function",
+      "synonyms": ["deductive inference"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "metaphor",
+      "category": "function",
+      "synonyms": ["metaphors","metaphorical"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "pineal body",
+      "category": "structure",
+      "synonyms": ["Glandula pinealis","Epiphysis cerebri","Epiphysis","Corpus pineale","Conarium","pineal body"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "explicit memory",
+      "category": "function",
+      "synonyms": ["explicit memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotional memory",
+      "category": "function",
+      "synonyms": ["emotional memories","emotion memories","emotion memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "pain",
+      "category": "function",
+      "synonyms": ["pain"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "periaqueductal",
+      "category": "structure",
+      "synonyms": ["periaqueductal grey","periaqueductal gray"],
+      "acronyms": ["PAG"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior colliculus",
+      "category": "structure",
+      "synonyms": ["superior colliculi","optic tectum","cranial colliculus","Corpus quadrigeminum superius","Colliculus superior","Colliculus rostralis","anterior corpus quadrigeminum","anterior colliculus","Colliculus bigeminalis oralis","Colliculus cranialis","super"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "thalamus",
+      "category": "structure",
+      "synonyms": ["Thalamus dorsalis","thalamuses","thalami","thalamencephalon","thalamus opticus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "eye contact",
+      "category": "function",
+      "synonyms": ["eye contact"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "humor",
+      "category": "function",
+      "synonyms": ["comedy"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological buffer",
+      "category": "function",
+      "synonyms": ["phonological buffer"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Kluver-Bucy syndrome",
+      "category": "pathology",
+      "synonyms": ["Kluver-Bucy"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "face perception",
+      "category": "function",
+      "synonyms": ["face perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "motor learning",
+      "category": "function",
+      "synonyms": ["motor learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "claustrum",
+      "category": "structure",
+      "synonyms": ["claustrum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "face recognition",
+      "category": "function",
+      "synonyms": ["face recognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "crystallized intelligence",
+      "category": "function",
+      "synonyms": ["crystallized intelligence"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "digit span",
+      "category": "function",
+      "synonyms": ["digit span"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "relational learning",
+      "category": "function",
+      "synonyms": ["relational learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "analogical problem solving",
+      "category": "function",
+      "synonyms": ["analogy problem solving"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "word production",
+      "category": "function",
+      "synonyms": ["word production"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "false memory",
+      "category": "function",
+      "synonyms": ["false memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "n-back",
+      "category": "function",
+      "synonyms": ["n-back"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Lou Gehrig's disease",
+      "category": "pathology",
+      "synonyms": ["amyotrophic lateral sclerosis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "perirhinal area",
+      "category": "structure",
+      "synonyms": ["perirhinal cortices","perirhinal cortex","Area perirhinalis","perirhinal area"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "posterior cingulate gyrus",
+      "category": "structure",
+      "synonyms": ["posterior cingulate","posterior cingulate gyri","Gyrus cinguli posterior","Gyrus limbicus posterior","posterior cingulate gyrus"],
+      "acronyms": ["PCC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dentate nucleus",
+      "category": "structure",
+      "synonyms": ["dentate nuclei","Nucleus lateralis cerebelli","Nucleus dentatus cerebelli","Nucleus dentatus","lateral nucleus of cerebellum","dentate nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anticipation",
+      "category": "function",
+      "synonyms": ["anticipatory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "feature extraction",
+      "category": "function",
+      "synonyms": ["feature extraction"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "form perception",
+      "category": "function",
+      "synonyms": ["form perceptions"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "primary visual cortex",
+      "category": "structure",
+      "synonyms": ["primary visual cortices","striate cortex"],
+      "acronyms": ["V1","VI"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "analogical reasoning",
+      "category": "function",
+      "synonyms": ["analogy reasoning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "audition",
+      "category": "function",
+      "synonyms": ["hearing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "social intelligence",
+      "category": "function",
+      "synonyms": ["social intelligence"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "olfaction",
+      "category": "function",
+      "synonyms": ["smell"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "perceptual categorization",
+      "category": "function",
+      "synonyms": ["perceptual categorization"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "simple reaction time",
+      "category": "function",
+      "synonyms": ["simple reaction time"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Tourette syndrome",
+      "category": "pathology",
+      "synonyms": ["Tourette's"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "familiarity",
+      "category": "function",
+      "synonyms": ["familiarity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "long term memory",
+      "category": "function",
+      "synonyms": ["long term memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anterior cingulate gyrus",
+      "category": "structure",
+      "synonyms": ["Gyrus limbicus anterior","anterior cingulate gyri","anterior cingulate","anterior cingulate gyrus","Cortex cingularis anterior","Gyrus cinguli anterior"],
+      "acronyms": ["ACC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "fusiform gyrus",
+      "category": "structure",
+      "synonyms": ["occipitotemporal gyrus","lateral occipito-temporal gyrus","Gyrus occipito-temporalis lateralis","fusiform gyri","fusiform gyrus","Gyrus fusiformis","Gyrus occipitotemporalis lateralis","occipitotemporal gyri"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mammillary body",
+      "category": "structure",
+      "synonyms": ["Corpora mamillaria","mammillary bodies","mamillary body","Corpus mammillare","Corpus mamillaris","Corpus mamillare","Corpora mammillaria"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "antisaccade",
+      "category": "function",
+      "synonyms": ["antisaccading","antisaccades"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "novelty processing",
+      "category": "function",
+      "synonyms": ["novelty processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "apparent motion",
+      "category": "function",
+      "synonyms": ["apparent motion"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior parietal lobule",
+      "category": "structure",
+      "synonyms": ["superior portion of parietal gyrus","superior parietal gyri","Lobulus parietalis superior","Gyrus parietalis superior","superior parietal lobule"],
+      "acronyms": ["SPL"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "interstitial nucleus of Cajal",
+      "category": "structure",
+      "synonyms": ["Nucleus interstitialis Cajal","interstitial nucleus of medial longitudinal fasciculus","interstitial nuclei of Cajal","interstitial nucleus of Cajal"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "figure ground",
+      "category": "function",
+      "synonyms": ["figure ground"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "short term memory",
+      "category": "function",
+      "synonyms": ["short term memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dyslexia",
+      "category": "pathology",
+      "synonyms": ["dyslexic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior frontal gyrus",
+      "category": "structure",
+      "synonyms": ["Regio subfrontalis","inferior frontal gyri","inferior frontal convolution","inferior frontal","Gyrus frontalis tertius","Gyrus frontalis inferior"],
+      "acronyms": ["IFG"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "apperception",
+      "category": "function",
+      "synonyms": ["apperceptive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "procedural rule",
+      "category": "function",
+      "synonyms": ["procedural rules"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "fixation",
+      "category": "function",
+      "synonyms": ["fixation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "periventricular nucleus",
+      "category": "structure",
+      "synonyms": ["periventricular nuclei"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "precuneus",
+      "category": "structure",
+      "synonyms": ["quadrate lobule","precuneate lobule","Praecuneus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "centromedian nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus centrum medianum","Nucleus centromedianus thalami","Nucleus centromedianus","Nucleus centri mediani thalami","Centrum medianum thalami","Nucleus centralis centralis","Centrum medianum","centromedian nuclei","centre median nucleus","central"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "fluid intelligence",
+      "category": "function",
+      "synonyms": ["fluid intelligence"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "delayed match to sample",
+      "category": "function",
+      "synonyms": ["delayed match to sample"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "self monitoring",
+      "category": "function",
+      "synonyms": ["self monitoring"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "focused attention",
+      "category": "function",
+      "synonyms": ["focused attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "frontal eye field",
+      "category": "structure",
+      "synonyms": ["frontal lobe eye field","frontal gaze center","frontal eye fields","frontal motor eye field","voluntary eye field"],
+      "acronyms": ["FEF"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "arousal",
+      "category": "function",
+      "synonyms": ["arousal"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "intrinsic motivation",
+      "category": "function",
+      "synonyms": ["intrinsic motivation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lexical retrieval",
+      "category": "function",
+      "synonyms": ["lexical retrieval"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mental arithmetic",
+      "category": "function",
+      "synonyms": ["mental math"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "oddball",
+      "category": "function",
+      "synonyms": ["oddball"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Huntington's disease",
+      "category": "pathology",
+      "synonyms": ["Huntington's"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "forgetting",
+      "category": "function",
+      "synonyms": ["forgetting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive load",
+      "category": "function",
+      "synonyms": ["cognitive load"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "consciousness",
+      "category": "function",
+      "synonyms": ["consciousness"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "word repetition",
+      "category": "function",
+      "synonyms": ["word repetition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Creutzfeldt-Jakob disease",
+      "category": "pathology",
+      "synonyms": ["Creutzfeldt-Jakob"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "nucleus accumbens",
+      "category": "structure",
+      "synonyms": ["Nucleus accumbens septi","colliculus of caudate nucleus","Colliculus nuclei caudati","accumbens nucleus","accumbens nuclei","nucleus accumbens"],
+      "acronyms": ["NAcc"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "articulation",
+      "category": "function",
+      "synonyms": ["articulation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "calcarine sulcus",
+      "category": "structure",
+      "synonyms": ["Sulcus calcarinus","Fissura calcarina","calcarine sulci","calcarine fissure","calcarine sulcus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "association learning",
+      "category": "function",
+      "synonyms": ["associative learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attentional blink",
+      "category": "function",
+      "synonyms": ["attentional blink"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lexical processing",
+      "category": "function",
+      "synonyms": ["lexical processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "convergent thinking",
+      "category": "function",
+      "synonyms": ["convergent thinking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "temporal discounting",
+      "category": "function",
+      "synonyms": ["temporal discounting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "habenula",
+      "category": "structure",
+      "synonyms": ["Nucleus habenularis","Nucleus habenulae","Nuclei habenulares","habenular nuclei","habenulae","Habenula complex","Ganglion interpedunculare","Ganglion intercrurale","habenular","Ganglion habenulae","Habenula"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "goal maintenance",
+      "category": "function",
+      "synonyms": ["goal maintenance"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gustatory memory",
+      "category": "function",
+      "synonyms": ["gustatory memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "deception",
+      "category": "function",
+      "synonyms": ["decieving"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "object identification",
+      "category": "function",
+      "synonyms": ["object identification"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "timbre",
+      "category": "function",
+      "synonyms": ["timbre"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "narcolepsy",
+      "category": "pathology",
+      "synonyms": ["narcoleptic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "abducens nucleus",
+      "category": "structure",
+      "synonyms": ["nucleus of abducens nerve","Nucleus nervi abducentis","abducens nerve nucleus","abducens nuclei","Nucleus abducens"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Broca's area",
+      "category": "structure",
+      "synonyms": ["motor speech area of Broca","convolution of Broca","Broca's speech area","area of Broca","anterior speech cortex","Broca's area"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hippocampus",
+      "category": "structure",
+      "synonyms": ["hippocampus proper","hippocampuses","hippocampus major","Hippocampi","Hippocampal","Cornu ammonis","Ammon's horn"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medial prefrontal cortex",
+      "category": "structure",
+      "synonyms": ["medial prefrontal cortices","medial prefrontal cortex"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "goal formation",
+      "category": "function",
+      "synonyms": ["goal formation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gustatory perception",
+      "category": "function",
+      "synonyms": ["gustatory perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "blind spot",
+      "category": "function",
+      "synonyms": "—",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "somatosensory perception",
+      "category": "function",
+      "synonyms": ["somatosensory perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "single-unit recording",
+      "category": "method",
+      "synonyms": ["single-unit","multi-unit recording","local field potentials","local field potential","LFP"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attentional capacity",
+      "category": "function",
+      "synonyms": ["attention capacity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attentional effort",
+      "category": "function",
+      "synonyms": ["attentional effort"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotional bonding",
+      "category": "function",
+      "synonyms": ["emotional bonding"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sentence completion",
+      "category": "function",
+      "synonyms": ["sentence completion"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "primary somesthetic area",
+      "category": "structure",
+      "synonyms": ["somatosensory strip","somatic afferent area","primary somesthetic cortex","primary somatosensory cortices","primary somatosensory cortex","primary somatic sensory area","postcentral tactile area","primary somesthetic area"],
+      "acronyms": ["S1","SI"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attentional shifting",
+      "category": "function",
+      "synonyms": ["attentional shifts","attentional shift","attention shifts","attention shifting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "language comprehension",
+      "category": "function",
+      "synonyms": ["language comprehension"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "facial nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus nervi facialis","facial nuclei","facial motor nuclei","branchiomotor nucleus of facial nerve","facial motor nucleus","motor nucleus of VII","Nucleus facialis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior colliculus",
+      "category": "structure",
+      "synonyms": ["posterior corpus quadrigeminum","posterior colliculus","inferior colliculi","Corpus bigeminum posterioris","Corpus bigeminalis caudalis","Colliculus inferior","Colliculus caudalis","caudal colliculus","inferior colliculus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gustation",
+      "category": "function",
+      "synonyms": ["taste"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "skill learning",
+      "category": "function",
+      "synonyms": ["skill learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "nondeclarative knowledge",
+      "category": "function",
+      "synonyms": ["nondeclarative knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "addiction",
+      "category": "pathology",
+      "synonyms": ["addiction"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "temporal pole",
+      "category": "structure",
+      "synonyms": ["Polus temporalis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ventral posteromedial nucleus",
+      "category": "structure",
+      "synonyms": ["ventral posteromedial nucleus of thalamus","ventral posteromedial nuclei","ventral posterior medial nucleus","ventral posterior medial nuclei","semilunar nucleus","posteromedial ventral nucleus of thalamus","Nucleus ventralis posteromedialis","Nucl"],
+      "acronyms": ["VPM"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attentional span",
+      "category": "function",
+      "synonyms": ["attention span"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "implicit knowledge",
+      "category": "function",
+      "synonyms": ["implicit knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive effort",
+      "category": "function",
+      "synonyms": ["cognitive effort"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "creativity",
+      "category": "function",
+      "synonyms": ["creativity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Pavlovian conditioning",
+      "category": "function",
+      "synonyms": ["Pavlovian conditioning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Alzheimer's disease",
+      "category": "pathology",
+      "synonyms": ["Alzheimer's"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "reticular nucleus of the thalamus",
+      "category": "structure",
+      "synonyms": ["thalamic reticular nucleus","thalamic reticular nuclei","reticular thalamic nuclei","reticular nuclear group","Nucleus thalamicus reticularis","Nucleus reticularis thalami","Nucleus reticularis","reticular nucleus of the thalamus","reticular thalam"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gustatory learning",
+      "category": "function",
+      "synonyms": ["gustatory learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "rule learning",
+      "category": "function",
+      "synonyms": ["rule learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "skill acquisition",
+      "category": "function",
+      "synonyms": ["skill acquisition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "trochlear nucleus",
+      "category": "structure",
+      "synonyms": "—",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attentional resources",
+      "category": "function",
+      "synonyms": ["attentional resources"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "habit memory",
+      "category": "function",
+      "synonyms": ["habit memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "morphological processing",
+      "category": "function",
+      "synonyms": ["morphological processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sustained attention",
+      "category": "function",
+      "synonyms": ["sustained attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "top down processing",
+      "category": "function",
+      "synonyms": ["top down processes"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "pons",
+      "category": "structure",
+      "synonyms": ["Pons Varolii","pons cerebri"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "handedness",
+      "category": "function",
+      "synonyms": ["handedness"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "stroke",
+      "category": "pathology",
+      "synonyms": ["strokes"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "pulvinar",
+      "category": "structure",
+      "synonyms": ["Pulvinar thalami","pulvinar nucleus","pulvinar nuclei","Nucleus pulvinaris thalami","Nucleus pulvinaris","Nuclei pulvinares"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "auditory attention",
+      "category": "function",
+      "synonyms": ["auditory attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "auditory learning",
+      "category": "function",
+      "synonyms": ["auditory learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "speech processing",
+      "category": "function",
+      "synonyms": ["speech processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "positron emission tomography",
+      "category": "method",
+      "synonyms": ["SPECT","single photon emission computed tomography","PET"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "subiculum",
+      "category": "structure",
+      "synonyms": ["subiculum hippocampi","subiculum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "happiness",
+      "category": "function",
+      "synonyms": ["happy"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "letter fluency",
+      "category": "function",
+      "synonyms": ["letter fluency"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual imagery",
+      "category": "function",
+      "synonyms": ["visual imagery"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "set shifting",
+      "category": "function",
+      "synonyms": ["set shifting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "olfactory bulb",
+      "category": "structure",
+      "synonyms": ["Bulbus olfactorius","olfactory bulb"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "auditory localization",
+      "category": "function",
+      "synonyms": ["auditory localization"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological working memory",
+      "category": "function",
+      "synonyms": ["phonological working memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sentence production",
+      "category": "function",
+      "synonyms": ["sentence production"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ventral tegmental area",
+      "category": "structure",
+      "synonyms": ["ventral tegmental nucleus of Tsai","ventral tegmental area of Tsai","Area tegmentalis ventralis"],
+      "acronyms": ["VTA"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hedonism",
+      "category": "function",
+      "synonyms": ["hedonic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "memory consolidation",
+      "category": "function",
+      "synonyms": ["memory consolidation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "subvocal speech",
+      "category": "function",
+      "synonyms": ["subvocal speech"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "perceptual binding",
+      "category": "function",
+      "synonyms": ["perceptual binding"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "bulimia",
+      "category": "pathology",
+      "synonyms": ["bulimic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ventral posterolateral nucleus",
+      "category": "structure",
+      "synonyms": ["ventral posterolateral thalamic nuclei","ventral posterolateral nucleus of thalamus","ventral posterolateral nuclei","Nucleus ventralis thalami posterior lateralis","Nucleus ventralis posterolateralis thalami","Nucleus ventralis posterolateralis"],
+      "acronyms": ["VPL"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "auditory memory",
+      "category": "function",
+      "synonyms": ["auditory memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "loss aversion",
+      "category": "function",
+      "synonyms": ["loss aversion"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "memory acquisition",
+      "category": "function",
+      "synonyms": ["memory acquisition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "divided attention",
+      "category": "function",
+      "synonyms": ["divided attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "subvocalization",
+      "category": "function",
+      "synonyms": ["subvocalization"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "obsessive compulsive disorder",
+      "category": "pathology",
+      "synonyms": ["OCD","obsessive compulsive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "supplementary motor cortex",
+      "category": "structure",
+      "synonyms": ["supplementary motor cortices","supplementary motor area","supplementary motor areas"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "auditory perception",
+      "category": "function",
+      "synonyms": ["auditory perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "uncertainty",
+      "category": "function",
+      "synonyms": ["uncertainty"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "humiliation",
+      "category": "function",
+      "synonyms": ["humiliated","humiliate"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior olive",
+      "category": "structure",
+      "synonyms": ["olivary eminence","inferior olivary eminence","inferior olives"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "iconic memory",
+      "category": "function",
+      "synonyms": ["iconic memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "spatial attention",
+      "category": "function",
+      "synonyms": ["spatial attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "reversal learning",
+      "category": "function",
+      "synonyms": ["reversal learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "auditory working memory",
+      "category": "function",
+      "synonyms": ["auditory working memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotional intelligence",
+      "category": "function",
+      "synonyms": ["emotional intelligence"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "motor sequence learning",
+      "category": "function",
+      "synonyms": ["motor sequence learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "reward",
+      "category": "function",
+      "synonyms": ["reward"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "apraxia",
+      "category": "pathology",
+      "synonyms": ["apraxic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "autobiographical memory",
+      "category": "function",
+      "synonyms": ["autobiographical memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "nondeclarative memory",
+      "category": "function",
+      "synonyms": ["nondeclarative memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "implicit memory",
+      "category": "function",
+      "synonyms": ["implicit memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual masking",
+      "category": "function",
+      "synonyms": ["visual masking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "substantia nigra",
+      "category": "structure",
+      "synonyms": ["Nucleus pigmentosus subthalamo-peduncularis","nucleus of basis pedunculi","substantia nigra"],
+      "acronyms": ["SN"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "aversive learning",
+      "category": "function",
+      "synonyms": ["aversive learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognition",
+      "category": "function",
+      "synonyms": ["cognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "autism",
+      "category": "pathology",
+      "synonyms": ["autistic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inattention",
+      "category": "function",
+      "synonyms": ["inattentive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mental imagery",
+      "category": "function",
+      "synonyms": ["mental imagery"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "movement planning",
+      "category": "function",
+      "synonyms": ["movement planning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "aphasia",
+      "category": "pathology",
+      "synonyms": ["aphasic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "imprinting",
+      "category": "function",
+      "synonyms": ["imprinting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "language production",
+      "category": "function",
+      "synonyms": ["language production"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "object perception",
+      "category": "function",
+      "synonyms": ["object perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "transcranial magnetic stimulation",
+      "category": "method",
+      "synonyms": ["transcranial magnetic","TMS","TDCS","transcranial direct current stimulation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "serial learning",
+      "category": "function",
+      "synonyms": ["serial learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "middle frontal gyrus",
+      "category": "structure",
+      "synonyms": ["middle frontal gyri","intermediate frontal gyrus","Gyrus frontalis secundus","Gyrus frontalis medius","Gyrus frontalis medialis"],
+      "acronyms": ["MFG"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "orbital gyri",
+      "category": "structure",
+      "synonyms": ["orbital cortex","orbital area","Gyrus orbitofrontalis","gyrus orbitalis longitudinalis","Gyrus orbitalis","Gyri orbitales","Cortex orbitofrontalis","orbitofrontal region","orbitofrontal gyrus","orbitofrontal cortices","orbitofrontal gyri","orbitofr"],
+      "acronyms": ["OFC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inductive inference",
+      "category": "function",
+      "synonyms": ["inductive inference"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "speech perception",
+      "category": "function",
+      "synonyms": ["speech perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emboliform nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus emboliformis cerebelli","Nucleus interpositus anterior cerebelli","emboliform nuclei","anterior interposed nucleus","anterior interpositus nucleus","emboliform nucleus","Nucleus emboliformis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lingual gyrus",
+      "category": "structure",
+      "synonyms": ["medial occipitotemporal gyrus","lingula of cerebral hemisphere","lingual gyri","Gyrus occipitotemporalis medialis","Gyrus lingualis","lingual gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "awareness",
+      "category": "function",
+      "synonyms": ["awareness"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "passive attention",
+      "category": "function",
+      "synonyms": ["passive attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "striatum",
+      "category": "structure",
+      "synonyms": ["neostriatum","Corpus striatum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lateral geniculate nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus geniculatus lateralis dorsalis","Nucleus corporis geniculati lateralis","lateral geniculate nuclei","lateral geniculate body","lateral geniculate bodies","dorsal nucleus of lateral geniculate body","dorsal nuclei of lateral geniculate body"],
+      "acronyms": ["LGB","LGN"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inhibition of return",
+      "category": "function",
+      "synonyms": ["inhibition of return"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Posner cueing",
+      "category": "function",
+      "synonyms": ["Posner cueing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "backward digit span",
+      "category": "function",
+      "synonyms": ["backward digit span"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "zona incerta",
+      "category": "structure",
+      "synonyms": ["zona incerta"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "intelligence",
+      "category": "function",
+      "synonyms": ["intelligence"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "logical reasoning",
+      "category": "function",
+      "synonyms": ["logical reasoning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "procedural memory",
+      "category": "function",
+      "synonyms": ["procedural memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cingulate gyrus",
+      "category": "structure",
+      "synonyms": ["upper limbic gyrus","Gyrus cinguli","Gyrus cingulatus","Gyri cinguli","cingulate region","cingulate gyri","cingulate area","cingular gyrus","callosomarginal gyrus","cingulate gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hypothalamus",
+      "category": "structure",
+      "synonyms": ["preoptico-hypothalamic region","preoptico-hypothalamic area","hypothalamuses","hypothalamic","Hypothalami"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "internal speech",
+      "category": "function",
+      "synonyms": ["internal speech"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "category learning",
+      "category": "function",
+      "synonyms": ["category learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "motor control",
+      "category": "function",
+      "synonyms": ["motor control"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "semantic knowledge",
+      "category": "function",
+      "synonyms": ["semantic knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "pontine nuclei",
+      "category": "structure",
+      "synonyms": ["Nucleus pontis","Nuclei pontis","Nuclei brachii pontis","pontine nuclei"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "intentional forgetting",
+      "category": "function",
+      "synonyms": ["intentional forgetting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "basal nucleus of the amygdala",
+      "category": "structure",
+      "synonyms": ["Nucleus basalis amygdalae","Nucleus amygdaloideus basolateralis","Nucleus amygdaloideus basalis","Nucleus amygdalae basalis","intermediate principal nucleus","basolateral nucleus of amygdala","basolateral amygdaloid nucleus","basal nuclei of the am"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gustatory area",
+      "category": "structure",
+      "synonyms": ["gustatory cortex","gustatory cortices"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "categorical perception",
+      "category": "function",
+      "synonyms": ["categorical perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "memory retrieval",
+      "category": "function",
+      "synonyms": ["memory retrieval"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "passive viewing",
+      "category": "function",
+      "synonyms": ["passive viewing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "panic disorder",
+      "category": "pathology",
+      "synonyms": ["panic disorder"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "traumatic brain injury",
+      "category": "pathology",
+      "synonyms": ["TBI"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "caudate nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus caudatus","Caudatus","caudate nuclei","caudate nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "involuntary attention",
+      "category": "function",
+      "synonyms": ["involuntary attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "posterior parahippocampal gyrus",
+      "category": "structure",
+      "synonyms": ["posterior parahippocampal gyri","posterior parahippocampal gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior salivatory nucleus",
+      "category": "structure",
+      "synonyms": ["superior salivatory nuclei","Nucleus salivatorius superior","Nucleus salivatorius cranialis","Nucleus salivarius superior","Nucleus salivatorius rostralis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "language acquisition",
+      "category": "function",
+      "synonyms": ["language acquisition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lying",
+      "category": "function",
+      "synonyms": ["lying"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anxiety",
+      "category": "pathology",
+      "synonyms": ["anxiety"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "raphe nuclei",
+      "category": "structure",
+      "synonyms": ["Nucleus of the raphe","Nucleus raphe","Nuclei raphes","Nuclei raphae","raphe nuclei"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cuneate nucleus of the medulla",
+      "category": "structure",
+      "synonyms": ["Nucleus restiformis","Nucleus cuneatus","Nucleus cuneatus medialis","cuneate nucleus","cuneate nuclei","Burdach's nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "causal inference",
+      "category": "function",
+      "synonyms": ["causal inference"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "speech production",
+      "category": "function",
+      "synonyms": ["speech production"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological encoding",
+      "category": "function",
+      "synonyms": ["phonological encoding"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medulla",
+      "category": "structure",
+      "synonyms": ["medulla oblongata","medulla"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "kinesthesia",
+      "category": "function",
+      "synonyms": ["kinesthetic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "color perception",
+      "category": "function",
+      "synonyms": ["colour perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "novelty detection",
+      "category": "function",
+      "synonyms": ["novelty detection"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual attention",
+      "category": "function",
+      "synonyms": ["visual attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "coma",
+      "category": "pathology",
+      "synonyms": ["comatose"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "central executive",
+      "category": "function",
+      "synonyms": ["central executive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "prosopagnosia",
+      "category": "pathology",
+      "synonyms": ["prosopagnosic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "posterior nucleus of the hypothalamus",
+      "category": "structure",
+      "synonyms": ["posterior nucleus","posterior nuclei","posterior hypothalamic area","Area hypothalamica posterior","Area posterior hypothalami","Nucleus hypothalamicus posterior","posterior hypothalamic nucleus","posterior nucleus of hypothalamus","posterior nucle"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "temporoparietal junction",
+      "category": "structure",
+      "synonyms": ["temporoparietal junction"],
+      "acronyms": ["TPJ"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "insula",
+      "category": "structure",
+      "synonyms": ["Lobus insularis","island of Reil","Insulas","insular gyrus","insular","insular cortex","insulae","Insula Reilii","insula lobule","insula cerebri","cortex of island","Cortex insularis","insular lobe"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "language learning",
+      "category": "function",
+      "synonyms": ["language learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "language processing",
+      "category": "function",
+      "synonyms": ["language processing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "semantic processing",
+      "category": "function",
+      "synonyms": ["semantic processes"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "premotor cortex",
+      "category": "structure",
+      "synonyms": ["promotor cortex","premotor cortices","intermediate precentral cortex","premotor area","premotor cortex"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ventral anterior nucleus",
+      "category": "structure",
+      "synonyms": ["ventroanterior thalamic nucleus","ventroanterior thalamic nuclei","ventral anterior thalamic nucleus","ventral anterior thalamic nuclei","ventral anterior nuclei","Nucleus ventralis thalami anterior","Nucleus ventralis anterior thalami","Nucleus ve"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive control",
+      "category": "function",
+      "synonyms": ["cognitive control"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "subliminal perception",
+      "category": "function",
+      "synonyms": ["subliminal perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "oculomotor nuclear complex",
+      "category": "structure",
+      "synonyms": ["oculomotor nuclei","nucleus of oculomotor nerve","Nucleus oculomotorius","Nucleus nervi oculomotorii","oculomotor nucleus","oculomotor nuclear complex"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "letter naming",
+      "category": "function",
+      "synonyms": ["letter naming"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mental representation",
+      "category": "function",
+      "synonyms": ["mental representation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sentence comprehension",
+      "category": "function",
+      "synonyms": ["sentence comprehension"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "planum temporale",
+      "category": "structure",
+      "synonyms": ["planum temporale"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "straight gyrus",
+      "category": "structure",
+      "synonyms": ["rectus gyrus","ventromedial gyrus","rectal gyrus","rectal gyri","medial part of gyri orbitales","gyrus rectus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive development",
+      "category": "function",
+      "synonyms": ["cognitive development"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dentate gyrus",
+      "category": "structure",
+      "synonyms": ["Fascia dentata hippocampi","Fascia dentata","dentate gyri","area dentata","Gyrus dentatus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive dissonance",
+      "category": "function",
+      "synonyms": ["cognitive dissonance"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "rhyme",
+      "category": "function",
+      "synonyms": ["rhyming"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "multiple sclerosis",
+      "category": "pathology",
+      "synonyms": ["multiple sclerosis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior temporal gyrus",
+      "category": "structure",
+      "synonyms": ["superior temporal gyri","Gyrus temporalis superior"],
+      "acronyms": ["STG"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mathematical reasoning",
+      "category": "function",
+      "synonyms": ["mathematical reasoning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anorexia",
+      "category": "pathology",
+      "synonyms": ["anorexic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "basal forebrain nucleus",
+      "category": "structure",
+      "synonyms": ["nucleus basalis of Meynert","Nucleus basalis Meynert","Nucleus basalis","basal nuclei of Meynert","basal magnocellular nucleus","basal forebrain nuclei","basal nuclei","basal nucleus","basal nucleus of Meynert","ganglion of Meynert","nucleus of sub"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "concept learning",
+      "category": "function",
+      "synonyms": ["concept learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "contextual knowledge",
+      "category": "function",
+      "synonyms": ["contextual knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "preconscious perception",
+      "category": "function",
+      "synonyms": ["preconscious perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anhedonia",
+      "category": "pathology",
+      "synonyms": ["anhedonic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "basal ganglia",
+      "category": "structure",
+      "synonyms": ["subcortical gray","telencephalic nuclei","Nuclei basales","basal nuclei","corpus striatum","basal ganglia","deep nuclear gray of hemisphere","Ganglia basales"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "fastigial nucleus",
+      "category": "structure",
+      "synonyms": ["roof nucleus","Nucleus motorius tecti cerebelli","Nucleus fastigius cerebelli","Nucleus fastigii cerebelli","medial nucleus of cerebellum","fastigial nuclei","fastigial nucleus","Nucleus fastigii"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "decision making",
+      "category": "function",
+      "synonyms": ["decision making"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "delayed recognition",
+      "category": "function",
+      "synonyms": ["delayed recognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "metamemory",
+      "category": "function",
+      "synonyms": ["metamemories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "putamen",
+      "category": "structure",
+      "synonyms": ["Nucleus putamen"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "indusium griseum",
+      "category": "structure",
+      "synonyms": ["gray stria of Lancisi"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "declarative memory",
+      "category": "function",
+      "synonyms": ["declarative memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual perception",
+      "category": "function",
+      "synonyms": ["visual perception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "risk seeking",
+      "category": "function",
+      "synonyms": ["risk seeking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gracile nucleus of the medulla",
+      "category": "structure",
+      "synonyms": ["Nucleus gracilis","gracile nucleus","Goll's nucleus","gracile nuclei","gracile nucleus of the medulla"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "deductive reasoning",
+      "category": "function",
+      "synonyms": ["deductive reasoning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mental rotation",
+      "category": "function",
+      "synonyms": ["mental rotation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "proprioception",
+      "category": "function",
+      "synonyms": ["proprioception"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Parkinson's disease",
+      "category": "pathology",
+      "synonyms": ["Parkinson's"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "delayed recall",
+      "category": "function",
+      "synonyms": ["delayed recall"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "delayed nonmatch to sample",
+      "category": "function",
+      "synonyms": ["delayed nonmatch to sample"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "object orientation",
+      "category": "function",
+      "synonyms": ["object orientation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "septum",
+      "category": "structure",
+      "synonyms": ["Septum telencephali","Massa praecommissuralis","septum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "metacognition",
+      "category": "function",
+      "synonyms": ["metacognitive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "semantic memory",
+      "category": "function",
+      "synonyms": ["semantic memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "subthalamic nucleus",
+      "category": "structure",
+      "synonyms": ["subthalamic nuclei","Nucleus subthalamicus","nucleus of Luys","Corpus subthalamicum","Corpus Luysi","Corpus hypothalamicum","body of Luys","body of Forel"],
+      "acronyms": ["STN"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "intralaminar nuclear group",
+      "category": "structure",
+      "synonyms": ["Nuclei intralaminares","nonspecific thalamic","intralaminar thalamic nuclei","intralaminar nuclei of thalamus","intralaminar nuclei","intralaminar nuclear group"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "motor planning",
+      "category": "function",
+      "synonyms": ["motor planning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "electroencephalography",
+      "category": "method",
+      "synonyms": ["iEEG","electroencephalographic","EEG","ECoG","electroencephalogram"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "saccade",
+      "category": "function",
+      "synonyms": ["saccading","saccades","saccadic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "prefrontal cortex",
+      "category": "structure",
+      "synonyms": ["prefrontal cortices","prefrontal cortex"],
+      "acronyms": ["PFC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior salivatory nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus salivatorius inferior","Nucleus salivatorius caudalis","Nucleus salivarius inferior","inferior salivatory nuclei","inferior salivatory nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "source memory",
+      "category": "function",
+      "synonyms": ["source memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dementia",
+      "category": "pathology",
+      "synonyms": ["demented"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior olive",
+      "category": "structure",
+      "synonyms": ["superior olivary nucleus","Oliva superior","Nucleus olivaris superioris","Nucleus olivaris metencephali","Nucleus olivaris rostralis","superior olivary nuclei","superior olives"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "music comprehension",
+      "category": "function",
+      "synonyms": ["music comprehension"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "target detection",
+      "category": "function",
+      "synonyms": ["target detection"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "spatial memory",
+      "category": "function",
+      "synonyms": ["spatial memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visuospatial cueing",
+      "category": "function",
+      "synonyms": ["visuospatial cue"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "operculum",
+      "category": "structure",
+      "synonyms": ["posterior part of inferior frontal gyrus","Pars posterior of inferior frontal gyrus","Pars opercularis gyri frontalis inferioris","opercular portion of inferior frontal gyrus","operculum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "entorhinal area",
+      "category": "structure",
+      "synonyms": ["secondary olfactory cortical area","secondary olfactory cortex","entorhinal cortex","Area entorhinalis ventralis et dorsalis","Area entorhinalis","Cortex entorhinalis","entorhinal","entorhinal area","entorhinal cortices"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "spatial working memory",
+      "category": "function",
+      "synonyms": ["spatial working memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "selective attention",
+      "category": "function",
+      "synonyms": ["selective attention"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "schizophrenia",
+      "category": "pathology",
+      "synonyms": ["schizophrenic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior temporal gyrus",
+      "category": "structure",
+      "synonyms": ["lateral occipitotemporal gyrus","inferior temporal gyri","Gyrus temporalis inferior","inferior temporal gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "object categorization",
+      "category": "function",
+      "synonyms": ["object categorization"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "semantic association",
+      "category": "function",
+      "synonyms": ["semantic association"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Wernicke-Korsakoff syndrome",
+      "category": "pathology",
+      "synonyms": ["Wernicke-Korsakoff"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Stroop",
+      "category": "function",
+      "synonyms": ["Stroop"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mesencephalic nucleus of the trigeminal nerve",
+      "category": "structure",
+      "synonyms": ["Nucleus tractus mesencephalicus nervi trigemini","Nucleus tractus mesencephalici nervi trigemini","Nucleus mesencephalicus nervi trigeminalis","mesencephalic nucleus","mesencephalic nucleus of the trigeminal nerve"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "object recognition",
+      "category": "function",
+      "synonyms": ["object recognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "word comprehension",
+      "category": "function",
+      "synonyms": ["word comprehension"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "epilepsy",
+      "category": "pathology",
+      "synonyms": ["epileptic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "syntactic processing",
+      "category": "function",
+      "synonyms": ["syntactic processes"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior parietal lobule",
+      "category": "structure",
+      "synonyms": ["Lobulus parietalis inferior","inferior portion of parietal gyrus","inferior parietal lobules","inferior parietal gyrus","inferior parietal gyri"],
+      "acronyms": ["IPL"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "passive listening",
+      "category": "function",
+      "synonyms": ["passive listening"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "procedural learning",
+      "category": "function",
+      "synonyms": ["procedural learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "trail making",
+      "category": "function",
+      "synonyms": ["trail making"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cerebellum",
+      "category": "structure",
+      "synonyms": ["epencephalon","Corpus cerebelli","Cerebellar","Cerebellum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "temporal operculum",
+      "category": "structure",
+      "synonyms": ["supratemporal plane","Operculum temporale","facies supratemporalis","temporal operculum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ventral posterior nucleus",
+      "category": "structure",
+      "synonyms": ["ventrobasal nucleus","ventrobasal nuclei","ventrobasal complex","ventral posterior thalamic nucleus","ventral posterior nuclei","ventral posterior thalamic nuclei","Nucleus ventralis posterior","Nuclei ventrales posteriores"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "performance monitoring",
+      "category": "function",
+      "synonyms": ["performance monitoring"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "trapezoid body",
+      "category": "structure",
+      "synonyms": ["trapezoid bodies","Corpus trapezoideum","corpus trapezoides"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological discrimination",
+      "category": "function",
+      "synonyms": ["phonological discrimination"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medial parietal gyrus",
+      "category": "structure",
+      "synonyms": ["medial parietal gyri","Gyrus parietalis medialis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "verbal memory",
+      "category": "function",
+      "synonyms": ["verbal memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "working memory retrieval",
+      "category": "function",
+      "synonyms": ["working memory retrieval"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dyspraxia",
+      "category": "pathology",
+      "synonyms": ["dyspraxic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual buffer",
+      "category": "function",
+      "synonyms": ["visual buffer"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "working memory",
+      "category": "function",
+      "synonyms": ["working memories","working memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dysgraphia",
+      "category": "pathology",
+      "synonyms": ["dysgraphic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological retrieval",
+      "category": "function",
+      "synonyms": ["phonological retrieval"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "repressed memory",
+      "category": "function",
+      "synonyms": ["repressed memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "stria terminalis",
+      "category": "structure",
+      "synonyms": ["Stria semicircularis","semicircular stria","Fibrae striae terminalis","fibrae striae terminalis","stria semicircularis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "picture naming",
+      "category": "function",
+      "synonyms": ["picture naming"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "depression",
+      "category": "pathology",
+      "synonyms": ["depressive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Wernicke's aphasia",
+      "category": "pathology",
+      "synonyms": ["Wernicke's aphasic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "procedural knowledge",
+      "category": "function",
+      "synonyms": ["procedural knowledge"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "working memory storage",
+      "category": "function",
+      "synonyms": ["working memory storage"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "visual working memory",
+      "category": "function",
+      "synonyms": ["visual working memory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "diffusion tensor imaging",
+      "category": "method",
+      "synonyms": ["tractography","fractional anisotropy","DTI","diffusion weighted","diffusion tensor"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Wisconsin card sorting",
+      "category": "function",
+      "synonyms": ["Wisconsin card sort"],
+      "acronyms": ["WCST"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior frontal gyrus",
+      "category": "structure",
+      "synonyms": ["superior frontal gyri","marginal gyrus","Gyrus frontalis superior","Gyrus frontalis primus","marginal gyri","superior frontal convolution","superior frontal gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "word recognition",
+      "category": "function",
+      "synonyms": ["word recognition"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "recognition memory",
+      "category": "function",
+      "synonyms": ["recognition memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "migraine",
+      "category": "pathology",
+      "synonyms": ["migraines"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "diagonal band",
+      "category": "structure",
+      "synonyms": ["Stria diagonalis","olfactory radiations of Zuckerkandl","gyrus diagonalis rhinencephli","Fasciculus olfactorius hippocampi","Fasciculus olfactorius","diagonal gyrus","Broca's diagonal gyrus","Bandeletta diagonalis","diagonal band of Broca","Fascicu"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "rhythm",
+      "category": "function",
+      "synonyms": ["rhythm"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anterior olfactory nucleus",
+      "category": "structure",
+      "synonyms": ["Regio retrobulbaris","retrobulbar region","Nucleus olfactorius anterior","Area retrobulbaris","anterior olfactory nuclei","anterior olfactory nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "tuber cinereum",
+      "category": "structure",
+      "synonyms": ["tuber cinereum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "magnetoencephalography",
+      "category": "method",
+      "synonyms": ["MEG","magnetoencephalographic","magnetoencephalogram"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Broca's aphasia",
+      "category": "pathology",
+      "synonyms": ["Broca's aphasic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "middle temporal gyrus",
+      "category": "structure",
+      "synonyms": ["middle temporal gyri","Gyrus temporalis medius","intermediate temporal gyrus","middle temporal gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ataxia",
+      "category": "pathology",
+      "synonyms": ["ataxic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "bipolar disorder",
+      "category": "pathology",
+      "synonyms": ["manic depressive","manic depression"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attention deficit hyperactivity disorder",
+      "category": "pathology",
+      "synonyms": ["attention deficit disorder","ADD","ADHD"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "post-traumatic stress disorder",
+      "category": "pathology",
+      "synonyms": ["PTSD","post-traumatic stress","post traumatic stress"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "borderline personality disorder",
+      "category": "pathology",
+      "synonyms": ["borderline personality"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dorsomedial nucleus of the hypothalamus",
+      "category": "structure",
+      "synonyms": ["Nucleus dorsomedialis hypothalami","dorsomedial nucleus","dorsomedial hypothalamic nucleus","dorsomedial nucleus of hypothalamus","dorsomedial nucleus of the hypothalamus","Nucleus hypothalamicus dorsomedialis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "herpes zoster",
+      "category": "pathology",
+      "synonyms": ["herpes zoster"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "social phobia",
+      "category": "pathology",
+      "synonyms": ["social phobic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "amygdala",
+      "category": "structure",
+      "synonyms": ["nucleus amygdalae","Corpus amygdaloideum","archistriatum","amygdaloid nucleus","amygdalar","amygdalae","amygdaloid body","amygdaloid nuclear complex","amygdaloid nuclear groups","Corpus amygdalae"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "secondary somesthetic area",
+      "category": "structure",
+      "synonyms": ["secondary sensory cortices","secondary sensory cortex","second somatic sensory area","secondary somesthetic area"],
+      "acronyms": ["S2","SII"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "postcentral gyrus",
+      "category": "structure",
+      "synonyms": ["postrolandic gyrus","postrolandic gyri","PoG","Gyrus centralis posterior","Gyrus postcentralis","postcentral gyrus","postcentral gyri","posterior central gyrus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "globose nucleus",
+      "category": "structure",
+      "synonyms": ["Nucleus interpositus posterior cerebelli","Nucleus globosus cerebelli","globose nuclei","Nuclei globosi","globose nucleus","Nucleus globosus","posterior interposed nucleus","posterior interpositus nucleus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Wernicke's area",
+      "category": "structure",
+      "synonyms": ["Wernicke's speech area","area of Wernicke","Wernicke's area"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medial frontal gyrus",
+      "category": "structure",
+      "synonyms": ["medial frontal gyri","Gyrus frontalis superior pars medialis","Gyrus frontalis medialis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sadness",
+      "category": "function",
+      "synonyms": ["sadness"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anterior forceps of the corpus callosum",
+      "category": "white_matter",
+      "synonyms": ["anterior forceps","forceps frontalis","forceps minor corporis callosi","forceps minor of corpus callosum","frontal forceps"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "peyote",
+      "category": "drug",
+      "synonyms": ["peyotl"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Santa",
+      "category": "silly",
+      "synonyms": ["Kris Kringle","Santa Claus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "solstice",
+      "category": "silly",
+      "synonyms": ["solstices"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "plasticity",
+      "category": "function",
+      "synonyms": ["neuroplasticity","plasticity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "crossmodal",
+      "category": "function",
+      "synonyms": ["cross-modal"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Christmas",
+      "category": "silly",
+      "synonyms": ["xmas","December 25"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Hanukkah",
+      "category": "silly",
+      "synonyms": ["Chanukah","Chanuka"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Blood-oxygen-level dependent",
+      "category": "function",
+      "synonyms": ["Blood-oxygen-level dependence"],
+      "acronyms": ["BOLD"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "glutamate",
+      "category": "neurochemical",
+      "synonyms": ["glutamic acid"],
+      "acronyms": ["Glu"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotion experience",
+      "category": "function",
+      "synonyms": ["emotion experiences","emotional experiences","emotional experience"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "zombie",
+      "category": "silly",
+      "synonyms": ["zombies","zombi","zombis","zombism","zombification"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "holiday",
+      "category": "silly",
+      "synonyms": ["holidays"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dopamine",
+      "category": "neurochemical",
+      "synonyms": ["dihydroxyphenethylamine","hydroxytyramine"],
+      "acronyms": ["DA"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "prolactin",
+      "category": "neurochemical",
+      "synonyms": ["luteotropic hormone","prolactin"],
+      "acronyms": ["LTH","PRL"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cerebral peduncle",
+      "category": "white_matter",
+      "synonyms": ["pedunculi cerebri","pedunculus cerebralis","pedunculus cerebri"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "posterior forceps of the corpus callosum",
+      "category": "white_matter",
+      "synonyms": ["forceps major corporis callosi","forceps occipitalis","occipital forceps","posterior forceps"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "seizure",
+      "category": "pathology",
+      "synonyms": ["seizures"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "multisensory integration",
+      "category": "function",
+      "synonyms": ["multisensory integration"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "oxycodone",
+      "category": "drug",
+      "synonyms": ["oxycodone"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "AIDS",
+      "category": "pathology",
+      "synonyms": ["acquired immune deficiency syndrome","acquired immunodeficiency syndrome"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "aging",
+      "category": "function",
+      "synonyms": ["aging"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "sleep",
+      "category": "function",
+      "synonyms": ["sleep"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "surprise",
+      "category": "function",
+      "synonyms": ["surprise"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "synesthesia",
+      "category": "function",
+      "synonyms": ["synesthesia"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "valence",
+      "category": "function",
+      "synonyms": ["valence"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "tapetum",
+      "category": "white_matter",
+      "synonyms": ["tapetum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "value",
+      "category": "function",
+      "synonyms": ["valuation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hydrocephalus",
+      "category": "pathology",
+      "synonyms": ["hydrocephalic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lateral thinking",
+      "category": "function",
+      "synonyms": ["divergent thinking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "vanity",
+      "category": "function",
+      "synonyms": ["vain"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "androgen",
+      "category": "neurochemical",
+      "synonyms": ["androgenic hormones","androgens"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "attention",
+      "category": "function",
+      "synonyms": ["attentional"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "biological motion",
+      "category": "function",
+      "synonyms": ["biological motion"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "somatostatin",
+      "category": "neurochemical",
+      "synonyms": ["growth hormone-inhibiting hormone","somatotropin release-inhibiting factor"],
+      "acronyms": ["GHIH","SRIF"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "learning",
+      "category": "function",
+      "synonyms": ["learning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cognitive aging",
+      "category": "function",
+      "synonyms": ["cognitive aging"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "vision",
+      "category": "function",
+      "synonyms": ["sight"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ketamine",
+      "category": "drug",
+      "synonyms": ["ketamine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "meditation",
+      "category": "function",
+      "synonyms": ["meditative"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior cerebellar peduncle",
+      "category": "white_matter",
+      "synonyms": ["corpus restiforme","crus cerebelli ad medullam oblongatam","crus medullo-cerebellare","inferior cerebellar peduncle","pedunculus cerebellaris caudalis","pedunculus cerebellaris inferior","restiform body"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "memory",
+      "category": "function",
+      "synonyms": ["memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ayahuasca",
+      "category": "drug",
+      "synonyms": ["yage"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "functional connectivity",
+      "category": "function",
+      "synonyms": ["functional connectivity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "caffeine",
+      "category": "drug",
+      "synonyms": ["caffein"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "methylenedioxymethamphetamine",
+      "category": "drug",
+      "synonyms": ["ecstasy"],
+      "acronyms": ["MDMA"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "insulin",
+      "category": "neurochemical",
+      "synonyms": ["insulin"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mindfulness",
+      "category": "function",
+      "synonyms": ["mindfulness"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "motor imitation",
+      "category": "function",
+      "synonyms": ["motor imitation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "neurogenesis",
+      "category": "function",
+      "synonyms": ["neurogenesis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "endocannabinoids",
+      "category": "neurochemical",
+      "synonyms": ["endocannabinoid"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mimickry",
+      "category": "function",
+      "synonyms": ["mimickry"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cannabis",
+      "category": "drug",
+      "synonyms": ["marijuana","marihuana"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "heroin",
+      "category": "drug",
+      "synonyms": ["diacetylmorphine","diamorphine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "lysergic acid diethylamide",
+      "category": "drug",
+      "synonyms": ["lysergide"],
+      "acronyms": ["LSD"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "BDNF",
+      "category": "neurochemical",
+      "synonyms": ["Brain-derived neurotrophic factor"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "William's Syndrome",
+      "category": "pathology",
+      "synonyms": ["William's Syndrome"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cocaine",
+      "category": "drug",
+      "synonyms": ["cocaine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "epinephrine",
+      "category": "neurochemical",
+      "synonyms": ["adrenaline"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "morality",
+      "category": "function",
+      "synonyms": ["morality"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "arcuate fasciculus",
+      "category": "white_matter",
+      "synonyms": ["fibrae arcuatae cerebri"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "datura",
+      "category": "drug",
+      "synonyms": ["datura"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "subcallosal fasciculus",
+      "category": "white_matter",
+      "synonyms": ["fasciculus occipito-frontalis superior","fasciculus occipitofrontalis superior","fasciculus subcallosus","stratum subcallosum","subcallosal bundle","superior fronto-occipital bundle","superior occipitofrontal fasciculus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "uncinate fasciculus of the forebrain",
+      "category": "white_matter",
+      "synonyms": ["fasciculus uncinatus","uncinate fasciculus of cerebral hemisphere"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "mirror neuron",
+      "category": "function",
+      "synonyms": ["mirror neuron system","mirror neurons"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "tetrahydrocannabinol",
+      "category": "drug",
+      "synonyms": ["delta-9-tetrahydrocannabinol","dronabinol"],
+      "acronyms": ["THC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "thyroid hormone",
+      "category": "neurochemical",
+      "synonyms": ["thyroid hormones"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior cerebellar peduncle",
+      "category": "white_matter",
+      "synonyms": ["brachium conjunctivum","crus cerebello-cerebrale","pedunculus cerebellaris cranialis","pedunculus cerebellaris rostralis","pedunculus cerebellaris superior","tractus cerebello-tegmentalis mesencephali"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dextromethorphan hydrobromide",
+      "category": "drug",
+      "synonyms": ["dextromethorphan hydrobromide"],
+      "acronyms": ["DXM"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "amnesia",
+      "category": "pathology",
+      "synonyms": ["amnesic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dimethyltryptamine",
+      "category": "drug",
+      "synonyms": ["dimethyltryptamine"],
+      "acronyms": ["DMT"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "ibogaine",
+      "category": "drug",
+      "synonyms": ["ibogaine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "methadone",
+      "category": "drug",
+      "synonyms": ["methadone"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "GABA",
+      "category": "neurochemical",
+      "synonyms": ["gamma aminobutyric acid","_-Aminobutyric acid"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gamma-hydroxybutyric acid",
+      "category": "drug",
+      "synonyms": ["gamma-hydroxybutyrate","sodium oxybate","_-Hydroxybutyric acid"],
+      "acronyms": ["GHB"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "thyrotropin-releasing hormone",
+      "category": "neurochemical",
+      "synonyms": ["protirelin","thyroliberin","thyrotropin-releasing factor"],
+      "acronyms": ["TRF","TRH"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "motor memory",
+      "category": "function",
+      "synonyms": ["motor memories"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "acetylcholine",
+      "category": "neurochemical",
+      "synonyms": ["acetylcholine"],
+      "acronyms": ["ACh"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "parathyroid hormone",
+      "category": "neurochemical",
+      "synonyms": ["parathormone","parathyrin"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "methamphetamine",
+      "category": "drug",
+      "synonyms": ["desoxyephedrine","metamfetamine","methylamphetamine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "nicotine",
+      "category": "drug",
+      "synonyms": ["nicotine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "adenosine",
+      "category": "neurochemical",
+      "synonyms": ["adenosine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "enkephalin",
+      "category": "neurochemical",
+      "synonyms": ["enkephalin"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "multisensory",
+      "category": "function",
+      "synonyms": ["multisensory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anandamide",
+      "category": "neurochemical",
+      "synonyms": ["N-arachidonoylethanolamine"],
+      "acronyms": ["AEA"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "monoamine oxidase inhibitor",
+      "category": "drug",
+      "synonyms": ["monoamine oxidase inhibitors"],
+      "acronyms": ["MAOI"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "aldosterone",
+      "category": "neurochemical",
+      "synonyms": ["aldosterone"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "estrogen",
+      "category": "neurochemical",
+      "synonyms": ["estrogens","oestrogens"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "alcoholism",
+      "category": "pathology",
+      "synonyms": ["alcoholic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "morphine",
+      "category": "drug",
+      "synonyms": ["morphine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "opiate",
+      "category": "drug",
+      "synonyms": ["opiates"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "corticotropin-releasing hormone",
+      "category": "neurochemical",
+      "synonyms": ["corticoliberin","corticotropin-releasing factor"],
+      "acronyms": ["CRF","CRH"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "relaxin",
+      "category": "neurochemical",
+      "synonyms": ["relaxin"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "opioid",
+      "category": "drug",
+      "synonyms": ["opioids"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotion relevance",
+      "category": "function",
+      "synonyms": ["emotionally relevant"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "corona radiata",
+      "category": "white_matter",
+      "synonyms": ["corona radiata"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "neuroplasticity",
+      "category": "function",
+      "synonyms": ["neuroplasticity"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cortisol",
+      "category": "neurochemical",
+      "synonyms": ["cortisol"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "psilocybin",
+      "category": "drug",
+      "synonyms": ["psilocybine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "genu of the corpus callosum",
+      "category": "white_matter",
+      "synonyms": ["genu corpus callosi","genu of corpus callosum","rostrum of corpus callosum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "salvia",
+      "category": "drug",
+      "synonyms": ["salvia"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "action monitoring",
+      "category": "function",
+      "synonyms": ["action monitoring"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "selective serotonin reuptake inhibitor",
+      "category": "drug",
+      "synonyms": ["selective serotonin reuptake inhibitors","serotonin-specific reuptake inhibitor"],
+      "acronyms": ["SSRI"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "tetrodotoxin",
+      "category": "drug",
+      "synonyms": ["TTX"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "estradiol",
+      "category": "neurochemical",
+      "synonyms": ["oestradiol"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "tobacco",
+      "category": "drug",
+      "synonyms": ["tobacco"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotion",
+      "category": "function",
+      "synonyms": ["emotional","emotions"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "fornix",
+      "category": "white_matter",
+      "synonyms": ["fornix cerebri"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "glucagon",
+      "category": "neurochemical",
+      "synonyms": ["glucagon"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "delay discounting",
+      "category": "function",
+      "synonyms": ["delay discounting"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "glucocorticoid",
+      "category": "neurochemical",
+      "synonyms": ["glucocorticoids"],
+      "acronyms": ["GC"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "histamine",
+      "category": "neurochemical",
+      "synonyms": ["histamines"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gonadotropin-releasing hormone",
+      "category": "neurochemical",
+      "synonyms": ["luliberin","Luteinizing-hormone-releasing hormone"],
+      "acronyms": ["GnRH"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anterior thalamic radiations",
+      "category": "white_matter",
+      "synonyms": ["anterior thalamic radiation","radiationes thalamicae anteriores"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "human growth hormone",
+      "category": "neurochemical",
+      "synonyms": ["somatotropin"],
+      "acronyms": ["HGH"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "anger",
+      "category": "function",
+      "synonyms": ["anger","angry"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "phonological awareness",
+      "category": "function",
+      "synonyms": ["phonological awareness"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "adenohypophysis",
+      "category": "structure",
+      "synonyms": ["anterior pituitary"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Posner cueing task",
+      "category": "function",
+      "synonyms": ["Posner task","Posner cueing"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "free will",
+      "category": "function",
+      "synonyms": ["free will"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "punishment",
+      "category": "function",
+      "synonyms": ["punishment"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "resting state network",
+      "category": "function",
+      "synonyms": ["resting state"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "self-referential",
+      "category": "function",
+      "synonyms": ["self-referential"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "risk aversion",
+      "category": "function",
+      "synonyms": ["risk aversive"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "self-relevance",
+      "category": "function",
+      "synonyms": ["self-relevant"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "salience",
+      "category": "function",
+      "synonyms": ["salience"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "diabetes",
+      "category": "pathology",
+      "synonyms": ["diabetic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "neurohypophysis",
+      "category": "structure",
+      "synonyms": ["posterior pituitary"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "serotonin",
+      "category": "neurochemical",
+      "synonyms": ["5-Hydroxytryptamine"],
+      "acronyms": ["5HT"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "conflict monitoring",
+      "category": "function",
+      "synonyms": ["conflict monitoring"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "connectome",
+      "category": "function",
+      "synonyms": ["connectome"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "superior longitudinal fasciculus",
+      "category": "white_matter",
+      "synonyms": ["fasciculus longitudinalis superior"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "control network",
+      "category": "function",
+      "synonyms": ["control networks"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "melatonin",
+      "category": "neurochemical",
+      "synonyms": ["N-acetyl-5-methoxytryptamine"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "extreme capsule",
+      "category": "white_matter",
+      "synonyms": ["capsula extrema"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "default network",
+      "category": "function",
+      "synonyms": ["default mode","default mode network"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "oxytocin",
+      "category": "neurochemical",
+      "synonyms": ["oxytocin"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "norepinephrine",
+      "category": "neurochemical",
+      "synonyms": ["noradrenaline"],
+      "acronyms": ["NA","NE"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "progesterone",
+      "category": "neurochemical",
+      "synonyms": ["progesterone"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "triiodothyronine",
+      "category": "neurochemical",
+      "synonyms": ["triiodothyronine"],
+      "acronyms": ["T3"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "disgust",
+      "category": "function",
+      "synonyms": ["disgusted"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "testosterone",
+      "category": "neurochemical",
+      "synonyms": ["testosterone"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "posterior thalamic radiations",
+      "category": "white_matter",
+      "synonyms": ["posterior thalamic radiation","radiationes thalamicae posteriores"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emotion regulation",
+      "category": "function",
+      "synonyms": ["emotional regulation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "thyroid stimulating hormone",
+      "category": "neurochemical",
+      "synonyms": ["thyrotropin"],
+      "acronyms": ["TSH"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "thyroxine",
+      "category": "neurochemical",
+      "synonyms": ["thyroxine"],
+      "acronyms": ["T4"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior occipitofrontal fasciculus",
+      "category": "white_matter",
+      "synonyms": ["fasciculus occipito-frontalis inferior","fasciculus occipitofrontalis inferior","inferior frontooccipital fasciculus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cingulum",
+      "category": "white_matter",
+      "synonyms": ["cingulum"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "tryptophan",
+      "category": "neurochemical",
+      "synonyms": "—",
+      "acronyms": ["Trp"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "vasopressin",
+      "category": "neurochemical",
+      "synonyms": ["Arginine vasopressin","argipressin","antidiuretic hormone"],
+      "acronyms": ["ADH","AVP"]
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "corpus callosum",
+      "category": "white_matter",
+      "synonyms": ["commissura magna","interhemispheric commissure"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "corticospinal tract",
+      "category": "white_matter",
+      "synonyms": ["corticospinal fibers","fasciculus cerebro-spinalis","fibrae corticospinales","tractus corticospinalis"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "emulation",
+      "category": "function",
+      "synonyms": ["emulation"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cranial nerves",
+      "category": "white_matter",
+      "synonyms": ["nervi craniales","nervi encephalici"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Eriksen flanker task",
+      "category": "function",
+      "synonyms": ["flanker","flanker task"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "external capsule",
+      "category": "white_matter",
+      "synonyms": ["capsula externa"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "genu of the internal capsule",
+      "category": "white_matter",
+      "synonyms": ["genu capsulae internae","genu of the internal capsule"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "inferior longitudinal fasciculus",
+      "category": "white_matter",
+      "synonyms": ["external sagittal stratum","fasciculus longitudinalis inferior","inferior longitudinal fasciculus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "medial lemniscus",
+      "category": "white_matter",
+      "synonyms": ["laqueus medialis","lemniscus medialis","lemniscus sensibilis","lemniscus sensitivus","median fillet","mesial fillet","tractus bulbo-thalamicus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "internal capsule",
+      "category": "white_matter",
+      "synonyms": ["capsula interna","internal capsule radiations"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "middle cerebellar peduncle",
+      "category": "white_matter",
+      "synonyms": ["brachium pontis","crus cerebelli ad pontem","crus ponto-cerebellare","pedunculus cerebellaris medius"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "eyeblink conditioning",
+      "category": "function",
+      "synonyms": ["eyeblink conditioning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "neglect",
+      "category": "pathology",
+      "synonyms": ["hemineglect","hemispatial neglect"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "eyelid conditioning",
+      "category": "function",
+      "synonyms": ["eyelid conditioning"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "splenium of the corpus callosum",
+      "category": "white_matter",
+      "synonyms": ["corpus callosum splenium","splenium"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "HIV",
+      "category": "pathology",
+      "synonyms": ["human immunodeficiency virus"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "vegetative",
+      "category": "pathology",
+      "synonyms": ["vegetative state"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "hypoxia",
+      "category": "pathology",
+      "synonyms": ["hypoxiation","hypoxic"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "cingulated",
+      "category": "silly",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "amygdale",
+      "category": "silly",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "narrative",
+      "category": "function",
+      "synonyms": ["narratives"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "confabulation",
+      "category": "pathology",
+      "synonyms": ["confabulatory"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "multitasking",
+      "category": "function",
+      "synonyms": ["multi-tasking"," multi-task"," dual-task"," dual-tasking"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "placebo effect",
+      "category": "function",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "placebo",
+      "category": "function",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "distraction",
+      "category": "function",
+      "synonyms": ["distractible"," distractibility"," distract"," distractions"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "perceptual grouping",
+      "category": "function",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "gestalt",
+      "category": "function",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "configural processing",
+      "category": "function",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "dorsolateral prefrontal cortex",
+      "category": "structure",
+      "synonyms": ["dorsolateral prefrontal cortex"," dorsolateral prefrontal cortices"," dlpfc"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "amphetamine",
+      "category": "drug",
+      "synonyms": ["amphetamines"," amfetamine"," alpha-methylphenethylamine"," Adderall"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "modafinil",
+      "category": "drug",
+      "synonyms": ["Provigil"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "methylphenidate",
+      "category": "drug",
+      "synonyms": ["Ritalin"],
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "satiety",
+      "category": "function",
+      "synonyms": "",
+      "acronyms": ""
+    }
+  },
+
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "donepezil",
+      "category": "drug",
+      "synonyms": ["Aricept"],
+      "acronyms": ""
+    }
+  },
+  {
+    "model": "brainscanr.term",
+    "fields": {
+      "created": "2017-04-27T21:15:05.857Z",
+      "name": "Love",
+      "category": "function",
+      "synonyms": ["loving"," loves"],
+      "acronyms": ""
+    }
+  }
+]
